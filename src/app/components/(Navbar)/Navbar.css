@@ -1,0 +1,100 @@
+.navBar {
+    display: flex;
+    width: 100%;
+    height: 50px;
+}
+
+.navFirstSection {
+    width: 50%;
+    margin: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.navFirstSectionBox {
+    margin-right: 15px;
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navFirstSection img {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+}
+
+.navFirstSection h1{
+    font-size: 14px;
+}
+
+/* ------------------------------------------------ */
+
+.navSecondSection {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    color: var(--fontColorSec);
+}
+
+.navDropdown {
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.navDropdown span{
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.navDivider {
+    width: 0.5px;
+    height: 20px;
+    background-color: var(--fontColorSec);
+    margin: 0 10px;
+}
+
+.navInput {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    width: 230px;
+    height: 30px;
+    font-size: 15px;
+}
+
+.navInputSearch {
+    margin:  0 5px;
+}
+
+.navInput span {
+    border: 1px solid var(--fontColorSec);
+    border-radius: 3px;
+    padding: 0 5px;
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.navPullRequest,
+.navReviewButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    margin-left: 8px;
+}
