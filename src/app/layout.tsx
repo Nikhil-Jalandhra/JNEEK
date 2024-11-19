@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./page.css";
+import Navbar from "./components/(Navbar)/Navbar.tsx";
+import Footer from "./components/(Footer)/Footer.tsx";
 
 
 export const metadata: Metadata = {
@@ -15,7 +18,16 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <Navbar/>
+        <div className="homePageSection">
+          <div className="homeProfile">
+            Profile
+          </div>
+          <div className="homeDynamic">
+          {children}
+          </div>
+        </div>
+        <Footer/>
       </body>
     </html>
   );

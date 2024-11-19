@@ -1,12 +1,18 @@
 .navBar {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    height: 50px;
+    height: 100px;
+    padding: 0 15px;
+    border-bottom: 1px solid var(--fontColorSec);
 }
 
 .navFirstSection {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
     width: 50%;
-    margin: 15px;
+    height: 60px;
     display: flex;
     align-items: center;
 }
@@ -36,32 +42,13 @@
 /* ------------------------------------------------ */
 
 .navSecondSection {
-    width: 50%;
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: end;
     color: var(--fontColorSec);
-}
-
-.navDropdown {
-    border: 1px solid var(--fontColorSec);
-    border-radius: 5px;
-    height: 30px;
-    display: flex;
-    align-items: center;
-    padding: 0 5px;
-}
-
-.navDropdown span{
-    margin: 0 5px;
-    font-size: 12px;
-}
-
-.navDivider {
-    width: 0.5px;
-    height: 20px;
-    background-color: var(--fontColorSec);
-    margin: 0 10px;
 }
 
 .navInput {
@@ -86,6 +73,30 @@
     font-size: 12px;
 }
 
+.navDivider {
+    width: 0.5px;
+    height: 20px;
+    background-color: var(--fontColorSec);
+    margin: 0 10px;
+}
+
+.navDropdown {
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    margin-right: 8px;
+}
+
+.navDropdown span{
+    margin: 0 5px;
+    font-size: 12px;
+}
+
+.navResumeDownload,
+.navNotification,
 .navPullRequest,
 .navReviewButton {
     display: flex;
@@ -95,6 +106,40 @@
     border-radius: 5px;
     width: 30px;
     height: 30px;
-    font-size: 20px;
-    margin-left: 8px;
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+.navHeroimg {
+    width: 35px;
+    height: 35px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 0.4px solid var(--fontColorSec);
+}
+
+.navHeroimg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---------------------------------------- */
+
+.navBaseSection {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+    display: flex;
+    font-size: 15px;
+}
+
+.navBaseSection span {
+    color: var(--fontColorSec);
+    margin-right: 8px;
+}
+
+.navLinkButton {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
 }
