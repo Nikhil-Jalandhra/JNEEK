@@ -1,25 +1,174 @@
-.homePageSection {
-    width: 100%;
-    min-height: 100vh;
+.overviewAbout {
+    border-radius: 5px;
+    padding: 20px;
+    border: 1px solid var(--fontColorSec);
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.overviewAbout p{
+    margin-bottom: 15px;
+}
+
+.overviewHeading {
+    margin: 25px 0 10px 0;
+    font-size: 15px;
+}
+
+.overviewProjects {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: 400px 1fr;
+    gap: 15px;
 }
 
-.homeProfile {
-    width: 400px;
-    grid-column: 1 / 2;
+.pinnedProjects {
+    border-radius: 5px;
+    padding: 15px;
+    border: 1px solid var(--fontColorSec);
+    color: var(--fontColorSec);
+    font-size: 13px;
+}
+
+.pinnedProjects h1 {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.pinnedProjects span {
+    margin-right: 7px;
+    color: var(--fontColorSec);
+}
+
+.blueLink {
+    text-decoration: none;
+    color: var(--fontBlueColor);
+}
+
+.blueLink:hover {
+    text-decoration: underline;
+    color: var(--fontBlueColor);
+}
+
+.publicTag {
+    margin-left: 5px;
+    border: 1px solid var(--fontColorSec);
+    color: var(--fontColorSec);
+    border-radius: 15px;
+    padding: 2px 8px;
+    font-size: 13px;
+}
+
+.pinnedProjectsDetails {
+    margin: 10px 0;
+}
+
+.pinnedProjectsMinor {
+    display: flex;
+    align-items: center;
+}
+
+.pinnedProjectsMinor p {
+    margin-right: 20px;
+}
+
+.pinnedProjectStar {
+    font-size: 15px;
+    margin-right: 3px;
+}
+
+.langColor {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.overviewDetailsContainer {
+    display: flex;
+    padding-top: 40px;
+}
+
+.overviewSectionFirst {
+    width: 85%;
+    overflow: hidden;
+}
+
+.overviewSectionFirst h1 {
+    font-size: 15px;
+}
+
+.overviewDetails {
     display: flex;
     flex-direction: column;
-    align-items: end;
-    padding: 10px;
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-.homeDynamic {
+.overviewContentContainer {
+    display: flex;
+    padding: 20px;
+}
+
+.overviewContent {
+    width: 50%;
+    border-right: 1px solid var(--fontColorSec);
+    font-size: 15px;
+}
+
+.overviewContent h1{
+    margin-bottom: 20px;
+}
+
+.overviewContentParagraph {
+    display: flex;
+}
+
+.overviewContentParagraph span {
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+.overviewDays {
     width: 100%;
-    grid-column: 2 / -1;
-    padding: 10px;
+    object-fit: cover;
+    padding: 20px;
+    border-bottom: 1px solid var(--fontColorSec);
 }
 
 
+.overviewGraph {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.overviewGraph img{
+    height: 250px;
+    object-fit: cover;
+}
+
+.overviewSectionSecond {
+    width: 15%;
+    padding-left: 20px;
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+}
+
+.overviewSectionSecond span{
+    margin-bottom: 15px;
+}
+
+.nonHiglightedYear {
+    padding-left: 15px;
+}
+
+.higlightedYear{
+    display: flex;
+    border-radius: 5px;
+    background-color: #194FB1;
+    padding: 7px 15px;
+}

@@ -1,0 +1,98 @@
+.homePageSection {
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: max-content 900px;
+    padding-top: 35px;
+}
+
+.homeProfile {
+    grid-column: 1 / 2;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    padding-right: 25px;
+}
+
+.homeProfileContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.homeProfileContainer img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--fontColorSec);
+}
+
+.petName {
+    font-size: 22px;
+    margin-top: 10px;
+}
+
+.myName {
+    font-size: 18px;
+    color: var(--fontColorSec);
+}
+
+.homeProfileContainer button{
+    color: white;
+    background-color: #262C36;
+    border: 1px solid var(--fontColorSec);
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 15px 0;
+}
+
+.homeProfileContainer p {
+    display: flex;
+    /* align-items: center; */
+}
+
+.homeProfileContainer span {
+    color: var(--fontColorSec);
+    margin: 3px 5px 0 0;
+}
+
+.homeProfileContainer a {
+    color: var(--fontColor);
+    text-decoration: none;
+}
+
+.homeDivider {
+    width: 100%;
+    height: 1px;
+    background-color: var(--fontColorSec);
+    margin: 15px 0;
+}
+
+.homeSkillsSection h1{
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.homeSkillsContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.homeSkillsContainer img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    margin: 5px;
+    border: 2.5px solid var(--fontColor);
+}
+
+/* ---------------------------------------- */
+
+.homeDynamic {
+    width: 100%;
+    grid-column: 2 / -1;
+    overflow: hidden;
+}

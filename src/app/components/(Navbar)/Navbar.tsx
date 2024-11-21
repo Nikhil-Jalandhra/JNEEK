@@ -1,5 +1,7 @@
 import "./Navbar.css";
 import React from "react";
+import Link from "next/link";
+
 import { GoGitPullRequest } from "react-icons/go";
 import { PiDownloadLight } from "react-icons/pi";
 import { GoIssueOpened } from "react-icons/go";
@@ -26,22 +28,22 @@ function Navbar() {
     },
     {
       navName: "Repositories",
-      navLink: "/",
+      navLink: "/repositories",
       navIcon: <GoRepo/>
     },
     {
       navName: "Projects",
-      navLink: "/",
+      navLink: "/projects",
       navIcon: <VscGithubProject/>
     },
     {
       navName: "Packages",
-      navLink: "/",
+      navLink: "/packages",
       navIcon: <GoPackage/>
     },
     {
       navName: "Stars",
-      navLink: "/",
+      navLink: "/stars",
       navIcon: <FaRegStar/>
     }
   ];
@@ -52,7 +54,7 @@ function Navbar() {
         <div className="navFirstSectionBox">
           <RxHamburgerMenu />
         </div>
-        <img src="/JNEEK.png" alt="logo" />
+        <img src="/JNEEK.webp" alt="logo" />
         <h1>Nikhil-Jalandhra</h1>
       </div>
       <div className="navSecondSection">
@@ -74,13 +76,13 @@ function Navbar() {
           <PiDownloadLight/>
         </div>
         <div className="navHeroimg">
-          <img src="/hero.jpg" alt="heroImg" />
+          <img src="/hero.webp" alt="heroImg" />
         </div>
       </div>
       <div className="navBaseSection">
           {navLinks.map((item, index)=> (
             <div className="navLinkButton" key={index}>
-              <span>{item.navIcon}</span>{item.navName}
+              <Link href={item.navLink}><span>{item.navIcon}</span>{item.navName}</Link>
             </div>
           ))}
       </div>

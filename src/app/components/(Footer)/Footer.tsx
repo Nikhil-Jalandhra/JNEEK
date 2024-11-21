@@ -6,11 +6,11 @@ import { FaRegCopyright } from "react-icons/fa";
 function Footer() {
   return (
     <div className='footerContainer'>
-        <img src="/JNEEK.PNG" alt="logo" />
+        <img src="/JNEEK.webp" alt="logo" />
         <span><FaRegCopyright/>2025 JNEEK, Developer.</span>
         <span>Terms</span>
         <span>Privacy</span>
-        <span>Seccurity</span>
+        <span>Security</span>
         <span>Please share my personal information</span>
     </div>
   );
