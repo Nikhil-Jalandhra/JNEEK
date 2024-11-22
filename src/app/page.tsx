@@ -1,44 +1,10 @@
-import "./page.css"
+import "./page.css";
+import project from "@/../database/projects.js";
 import { GoRepo } from "react-icons/go";
 import { FaRegStar } from "react-icons/fa";
 import Link from "next/link";
 
-export default function Home() {
-
-  const projectArray = [
-    {
-      name: "Urban Dapper",
-      description: "This is a E-Store of men's Items (Practice TypeScript)",
-      lang: "TypeScript",
-      star: "1",
-      link: "https://urban-dapper.vercel.app/",
-      color: "#3178C6"
-    },
-    {
-      name: "Dark-Studio",
-      description: "Cool UI-UX webstie",
-      lang: "JavaScript",
-      star: "1",
-      link: "https://dark-studio-j1q2lzzy9-nikhil-jalandhras-projects.vercel.app",
-      color: "#F1E05A"
-    },
-    {
-      name: "Goodness-In-Bowl",
-      description: "Created a food blogging website to enhance my skills with React.js",
-      lang: "TypeScript",
-      star: "1",
-      link: "https://goodness-in-bowl.vercel.app/",
-      color: "#3178C6"
-    },
-    {
-      name: "Quize-App-My-First-Project",
-      description: "This is my First Project with my own knowledge (#no Youtube tutorials)",
-      lang: "JavaScript",
-      star: "1",
-      link: "https://quiz-app-my-first-project.vercel.app/",
-      color: "#F1E05A"
-    },
-  ]
+export default function Home() {  
 
   return (
     <div>
@@ -58,7 +24,7 @@ export default function Home() {
       </div>
       <h1 className="overviewHeading">Projects</h1>
       <div className="overviewProjects">
-        {projectArray.map((item, index)=> (
+        {project.map((item, index)=> (
           <div key={index} className="pinnedProjects">
           <h1><span><GoRepo/></span><Link className="blueLink" target="blank" href={item.link}>{item.name}</Link><p className="publicTag">Public</p></h1>
           <p className="pinnedProjectsDetails">{item.description}</p>
