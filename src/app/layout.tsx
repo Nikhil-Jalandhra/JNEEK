@@ -90,7 +90,6 @@ export default function RootLayout({
                     <img key={index} src={item.image} alt={item.name} />
                   ))}
                 </div>
-                <p>Block & Report</p>
               </div>
             </div>
           </div>

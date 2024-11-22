@@ -12,39 +12,32 @@ import { FaPlus } from "react-icons/fa6";
 
 //------------------------------------------
 
-import { LuBookOpen } from "react-icons/lu";
 import { GoRepo } from "react-icons/go";
-import { VscGithubProject } from "react-icons/vsc";
-import { GoPackage } from "react-icons/go";
-import { FaRegStar } from "react-icons/fa";
+import { TbLogs } from "react-icons/tb";
+import { FaUserGraduate } from "react-icons/fa";
 
 function Navbar() {
 
   const navLinks = [
     {
-      navName: "Overview",
+      navName: "About",
       navLink: "/",
-      navIcon: <LuBookOpen/>
-    },
-    {
-      navName: "Repositories",
-      navLink: "/repositories",
-      navIcon: <GoRepo/>
+      navIcon: <FaUserGraduate/>
     },
     {
       navName: "Projects",
       navLink: "/projects",
-      navIcon: <VscGithubProject/>
+      navIcon: <GoRepo/>
     },
     {
-      navName: "Packages",
-      navLink: "/packages",
-      navIcon: <GoPackage/>
+      navName: "Blogs",
+      navLink: "/blogs",
+      navIcon: <TbLogs/>
     },
     {
       navName: "Stars",
       navLink: "/stars",
-      navIcon: <FaRegStar/>
+      navIcon: <FaUserGraduate/>
     }
   ];
 
@@ -55,7 +48,7 @@ function Navbar() {
           <RxHamburgerMenu />
         </div>
         <img src="/JNEEK.webp" alt="logo" />
-        <h1>Nikhil-Jalandhra</h1>
+        <h1><Link href='/' >Nikhil-Jalandhra</Link></h1>
       </div>
       <div className="navSecondSection">
         <div className="navInput">

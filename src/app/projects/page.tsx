@@ -1,6 +1,6 @@
 import "./page.css"
 import React from 'react';
-import Dropdown from "../components/(Dropdown)/Dropdown.tsx";
+import Dropdown from "../components/(Dropdown)/Dropdown";
 import { FaArrowUpRightFromSquare } from "react-icons/fa6";
 import project from "@/../database/projects.js";
 import Link from "next/link";
@@ -9,7 +9,7 @@ function page() {
   return (
     <div className='repositoriesPage'>
         <div className="repoNav">
-            <input type="text" placeholder="Find a repository..." />
+            <input type="text" placeholder="Find a project..." />
             <Dropdown children={{name: "Type", select: "All", list: ["Ecomerce", "DataBase", "JavaScript", "UI-UX"]}}/>
             <Dropdown children={{name: "Language", select: "language", list: ["JavaScript", "Java", "PHP","TypeScript"]}}/>
             <Dropdown children={{name: "Sort", select: "order", list: ["Last Update", "Name"]}}/>
