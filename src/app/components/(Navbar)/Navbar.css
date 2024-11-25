@@ -30,13 +30,19 @@
 }
 
 .navFirstSection img {
-    margin-right: 15px;
+    margin-right: 8px;
     width: 30px;
     height: 30px;
 }
 
 .navFirstSection h1{
     font-size: 14px;
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.navFirstSection h1:hover{
+    background-color: #2F3742;
 }
 
 .navFirstSection a {
@@ -143,13 +149,32 @@
     margin-right: 8px;
 }
 
+.navLinkContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-wrap: nowrap;
+    margin: 0 10px;
+}
+
+.navLinkUnderLine {
+    height: 1px;
+    width: 100%;
+    background-color: orange;
+}
+
 .navLinkButton {
     display: flex;
-    align-items: center;
-    margin: 0 10px;
+    align-items: end;
 }
 
 .navLinkButton a {
     text-decoration: none;
     color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.navLinkButton a:hover {
+    background-color: #2F3742;
 }

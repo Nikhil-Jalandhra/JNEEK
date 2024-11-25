@@ -3,7 +3,7 @@ import "./globals.css";
 import "./layout.css";
 import Link from "next/link";
 import { LuDot } from "react-icons/lu";
-import { IoLocationOutline } from "react-icons/io5";
+import { SiGmail } from "react-icons/si";
 import { IoLogoLinkedin } from "react-icons/io";
 import { FaGithub } from "react-icons/fa";
 import Navbar from "./components/(Navbar)/Navbar.tsx";
@@ -79,7 +79,7 @@ export default function RootLayout({
               <h1 className="petName">Jneek</h1>
               <h2 className="myName">Nikhil-Jalandhra <LuDot/> he/him</h2>
               <button>Developer</button>
-              <p><span><IoLocationOutline/></span> nikhiljalandhra@gmail.com</p>
+              <p><span><SiGmail/></span> nikhiljalandhra@gmail.com</p>
               <p><span><IoLogoLinkedin/></span><Link href="https://www.linkedin.com/in/nikhil-jalandhra-1479742b0/">linkedin</Link></p>
               <p><span><FaGithub/></span><Link href="https://github.com/Nikhil-Jalandhra">git-hub</Link></p>
               <div className="homeDivider"></div>

@@ -1,7 +1,7 @@
 import "./page.css"
 import React from 'react';
 import Dropdown from "../components/(Dropdown)/Dropdown";
-import { FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaLink } from "react-icons/fa";
 import project from "@/../database/projects.js";
 import Link from "next/link";
 
@@ -10,14 +10,14 @@ function page() {
     <div className='repositoriesPage'>
         <div className="repoNav">
             <input type="text" placeholder="Find a project..." />
-            <Dropdown children={{name: "Type", select: "All", list: ["Ecomerce", "DataBase", "JavaScript", "UI-UX"]}}/>
+            <Dropdown children={{name: "Type", select: "All", list: ["Ecomerce", "Game", "JavaScript", "UI-UX"]}}/>
             <Dropdown children={{name: "Language", select: "language", list: ["JavaScript", "Java", "PHP","TypeScript"]}}/>
             <Dropdown children={{name: "Sort", select: "order", list: ["Last Update", "Name"]}}/>
         </div>
           {project.map((item, index)=> (
             <div key={index} className="allProjectcontainer">
               <div className="projectFirstSection">
-                <h1>{item.name}</h1>
+                <h1><Link href="/projects">{item.name}</Link></h1>
                 <h2>{item.description}</h2>
                 <div className="langContainer">
                   <div className="langColor" style={{backgroundColor: `${item.color}`}}></div>
@@ -25,8 +25,8 @@ function page() {
                 </div>
               </div>
               <div className="projectSecondSection">
-                <p><Link href={item.link}>Project Lookup <FaArrowUpRightFromSquare/></Link></p>
-                <p>Created on: {item.date}</p>
+                <p><Link href={item.link} target="blank">Project Lookup <span><FaLink/></span></Link></p>
+                <p>Birthday: {item.date}</p>
               </div>
             </div>
           ))}

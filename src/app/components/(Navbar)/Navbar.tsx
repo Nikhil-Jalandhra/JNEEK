@@ -3,7 +3,7 @@ import React from "react";
 import Link from "next/link";
 
 import { GoGitPullRequest } from "react-icons/go";
-import { PiDownloadLight } from "react-icons/pi";
+import { LuInbox } from "react-icons/lu";
 import { GoIssueOpened } from "react-icons/go";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaSortDown } from "react-icons/fa";
@@ -12,9 +12,11 @@ import { FaPlus } from "react-icons/fa6";
 
 //------------------------------------------
 
-import { GoRepo } from "react-icons/go";
-import { TbLogs } from "react-icons/tb";
+import { MdWork } from "react-icons/md";
+import { RiMessage3Fill } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
+import { RiBox3Fill } from "react-icons/ri";
+
 
 function Navbar() {
 
@@ -27,17 +29,17 @@ function Navbar() {
     {
       navName: "Projects",
       navLink: "/projects",
-      navIcon: <GoRepo/>
+      navIcon: <MdWork/>
     },
     {
       navName: "Blogs",
       navLink: "/blogs",
-      navIcon: <TbLogs/>
+      navIcon: <RiMessage3Fill/>
     },
     {
-      navName: "Stars",
-      navLink: "/stars",
-      navIcon: <FaUserGraduate/>
+      navName: "OutOfBox",
+      navLink: "/outofBox",
+      navIcon: <RiBox3Fill />
     }
   ];
 
@@ -66,7 +68,7 @@ function Navbar() {
           <GoGitPullRequest/>
         </div>
         <div className="navResumeDownload">
-          <PiDownloadLight/>
+          <LuInbox/>
         </div>
         <div className="navHeroimg">
           <img src="/hero.webp" alt="heroImg" />
@@ -74,8 +76,11 @@ function Navbar() {
       </div>
       <div className="navBaseSection">
           {navLinks.map((item, index)=> (
-            <div className="navLinkButton" key={index}>
-              <Link href={item.navLink}><span>{item.navIcon}</span>{item.navName}</Link>
+            <div className="navLinkContainer">
+              <div className="navLinkButton" key={index}>
+                <Link href={item.navLink}><span>{item.navIcon}</span>{item.navName}</Link>
+              </div>
+              <div className="navLinkUnderLine"></div>
             </div>
           ))}
       </div>
