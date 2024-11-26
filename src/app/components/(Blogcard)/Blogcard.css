@@ -1,0 +1,28 @@
+.blogCardContainer {
+    /* min-width: 100px; */
+    border: 1px solid var(--fontColorSec);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.blogCardContainer h1 {
+    font-size: 23px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.blogCardContainer p {
+    font-size: 13px;
+    color: var(--fontColorSec);
+    margin-bottom: 15px;
+}
+
+.blogCardContainer button {
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1px solid var(--fontColorSec);
+    background-color: #2A313C;
+    color: white;
+}

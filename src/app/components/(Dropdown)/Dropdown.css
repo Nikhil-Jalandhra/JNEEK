@@ -15,6 +15,10 @@
     justify-content: center;
 }
 
+.dropdown button:hover{
+    background-color: #212830;
+}
+
 .dropdown button span {
     margin-left: 5px;
 }
@@ -30,10 +34,10 @@
 .dropdownContent {
     display: none;
     position: absolute;
-    transform: translateX(-60%);
+    min-width: 300px;
+    right: 0;
     background-color: #151B23;
     color: white;
-    min-width: 300px;
     z-index: 1;
     overflow: hidden;
     border-radius: 6px;

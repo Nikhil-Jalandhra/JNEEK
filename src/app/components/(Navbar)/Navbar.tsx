@@ -1,3 +1,4 @@
+"use client"
 import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
@@ -16,6 +17,7 @@ import { MdWork } from "react-icons/md";
 import { RiMessage3Fill } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiBox3Fill } from "react-icons/ri";
+import { usePathname } from "next/navigation";
 
 
 function Navbar() {
@@ -42,6 +44,8 @@ function Navbar() {
       navIcon: <RiBox3Fill />
     }
   ];
+
+  const pathName = usePathname();
 
   return (
     <div className="navBar">
@@ -76,11 +80,11 @@ function Navbar() {
       </div>
       <div className="navBaseSection">
           {navLinks.map((item, index)=> (
-            <div className="navLinkContainer">
+            <div key={index} className="navLinkContainer">
               <div className="navLinkButton" key={index}>
                 <Link href={item.navLink}><span>{item.navIcon}</span>{item.navName}</Link>
               </div>
-              <div className="navLinkUnderLine"></div>
+              <div className={item.navLink == pathName ? "navLinkUnderLine" : ""} ></div>
             </div>
           ))}
       </div>
