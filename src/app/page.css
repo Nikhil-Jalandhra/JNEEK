@@ -1,7 +1,7 @@
 .overviewAbout {
     border-radius: 5px;
     padding: 20px;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     font-size: 15px;
     line-height: 22px;
 }
@@ -24,8 +24,8 @@
 .pinnedProjects {
     border-radius: 5px;
     padding: 15px;
-    border: 1px solid var(--fontColorSec);
-    color: var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
+    color: var(--secondaryFont);
     font-size: 13px;
 }
 
@@ -37,23 +37,23 @@
 
 .pinnedProjects span {
     margin-right: 7px;
-    color: var(--fontColorSec);
+    color: var(--secondaryFont);
 }
 
 .blueLink {
     text-decoration: none;
-    color: var(--fontBlueColor);
+    color: var(--linkFont);
 }
 
 .blueLink:hover {
     text-decoration: underline;
-    color: var(--fontBlueColor);
+    color: var(--linkFont);
 }
 
 .publicTag {
     margin-left: 5px;
-    border: 1px solid var(--fontColorSec);
-    color: var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
+    color: var(--secondaryFont);
     border-radius: 15px;
     padding: 2px 8px;
     font-size: 13px;
@@ -101,7 +101,7 @@
 .overviewDetails {
     display: flex;
     flex-direction: column;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     margin-top: 10px;
 }
@@ -113,7 +113,7 @@
 
 .overviewContent {
     width: 50%;
-    border-right: 1px solid var(--fontColorSec);
+    border-right: 1px solid var(--secondaryFont);
     font-size: 15px;
 }
 
@@ -134,7 +134,7 @@
     width: 100%;
     object-fit: cover;
     padding: 20px;
-    border-bottom: 1px solid var(--fontColorSec);
+    border-bottom: 1px solid var(--secondaryFont);
 }
 
 

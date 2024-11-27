@@ -5,7 +5,6 @@ const project = [
         lang: "TypeScript",
         star: "1",
         link: "https://urban-dapper.vercel.app/",
-        color: "#3178C6",
         date: "5-12-24"
       },
       {
@@ -14,7 +13,6 @@ const project = [
         lang: "JavaScript",
         star: "1",
         link: "https://dark-studio-j1q2lzzy9-nikhil-jalandhras-projects.vercel.app",
-        color: "#F1E05A",
         date: "5-12-24"
       },
       {
@@ -23,7 +21,6 @@ const project = [
         lang: "TypeScript",
         star: "1",
         link: "https://goodness-in-bowl.vercel.app/",
-        color: "#3178C6",
         date: "5-12-24"
       },
       {
@@ -32,7 +29,6 @@ const project = [
         lang: "JavaScript",
         star: "1",
         link: "https://quiz-app-my-first-project.vercel.app/",
-        color: "#F1E05A",
         date: "5-12-24"
       }
 ];

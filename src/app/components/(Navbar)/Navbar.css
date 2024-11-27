@@ -5,7 +5,7 @@
     width: 100%;
     height: 100px;
     padding: 0 15px;
-    border-bottom: 1px solid var(--fontColorSec);
+    border-bottom: 1px solid var(--secondaryFont);
 }
 
 .navFirstSection {
@@ -19,7 +19,7 @@
 
 .navFirstSectionBox {
     margin-right: 15px;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     display: flex;
     width: 30px;
@@ -42,7 +42,7 @@
 }
 
 .navFirstSection h1:hover{
-    background-color: #2F3742;
+    background-color: var(--navHover);
 }
 
 .navFirstSection a {
@@ -59,13 +59,13 @@
     display: flex;
     align-items: center;
     justify-content: end;
-    color: var(--fontColorSec);
+    color: var(--secondaryFont);
 }
 
 .navInput {
     display: flex;
     align-items: center;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     width: 230px;
     height: 30px;
@@ -77,7 +77,7 @@
 }
 
 .navInput span {
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 3px;
     padding: 0 5px;
     margin: 0 5px;
@@ -87,22 +87,18 @@
 .navDivider {
     width: 0.5px;
     height: 20px;
-    background-color: var(--fontColorSec);
+    background-color: var(--secondaryFont);
     margin: 0 10px;
 }
 
 .navDropdown {
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     height: 30px;
     display: flex;
     align-items: center;
     padding: 0 5px;
     margin-right: 8px;
-}
-
-.navDropdown {
-    background-color: #212830;
 }
 
 .navDropdown span{
@@ -117,7 +113,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     width: 30px;
     height: 30px;
@@ -125,11 +121,12 @@
     margin-right: 8px;
 }
 
+.navDropdown:hover,
 .navResumeDownload:hover,
 .navNotification:hover,
 .navPullRequest:hover,
 .navReviewButton:hover {
-    background-color: #212830;
+    background-color: var(--navHover);
 }
 
 .navHeroimg {
@@ -137,7 +134,7 @@
     height: 35px;
     overflow: hidden;
     border-radius: 50%;
-    border: 0.4px solid var(--fontColorSec);
+    border: 0.4px solid var(--secondaryFont);
 }
 
 .navHeroimg img {
@@ -156,7 +153,7 @@
 }
 
 .navBaseSection span {
-    color: var(--fontColorSec);
+    color: var(--secondaryFont);
     margin-right: 8px;
 }
 
@@ -172,7 +169,7 @@
 .navLinkUnderLine {
     height: 2px;
     width: 100%;
-    background-color: #FF967D;
+    background-color: var(--navOrange);
     border-radius: 5px;
 }
 
@@ -189,5 +186,5 @@
 }
 
 .navLinkButton a:hover {
-    background-color: #2F3742;
+    background-color: var(--navHover);
 }

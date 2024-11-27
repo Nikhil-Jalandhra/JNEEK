@@ -1,16 +1,37 @@
 :root {
-  --baseColor: #010409;
-  --fontColor: #ffffff;
-  --fontColorSec: #B7BDC8;
-  --fontBlueColor: #74B9FF;
+  
+  /* ----------------Base Colors------------------ */
+
+  --background: #010409;
+  --primaryFont: #ffffff;
+  --secondaryFont: #B7BDC8;
+  --btn-base: #262c36;
+  --btn-hover: #2A313C;
+  --linkFont: #74B9FF;
+
+  /* ----------------nav Colors------------------ */
+
+  --navHover: #2F3742;
+  --navOrange: #FF967D;
+
+  /* ----------------Language Colors------------------ */
+
+  --HTML: #E34C26;
+  --CSS: #563D7C;
+  --JavaScript: #F1E05A;
+  --TypeScript: #3178C6;
+  --PHP: #4f5d95;
+  --JAVA: #B07219;
+  
+
 }
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  background-color: var(--baseColor);
-  color: var(--fontColor);
+  background-color: var(--background);
+  color: var(--primaryFont);
   font-family: sans-serif;
 }
 
@@ -22,6 +43,10 @@ h1 {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+}
+
+a {
+  color: var(--linkFont);
 }
 
 

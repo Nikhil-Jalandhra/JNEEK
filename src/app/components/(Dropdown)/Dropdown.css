@@ -5,9 +5,9 @@
 } 
 
 .dropdown button{
-    background-color: #151B23;
+    background-color: var(--btn-base);
     color: white;
-    border: 1px solid var(--fontColorSec);
+    border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     padding: 8px 20px;
     display: flex;
@@ -16,7 +16,7 @@
 }
 
 .dropdown button:hover{
-    background-color: #212830;
+    background-color: var(--btn-hover);
 }
 
 .dropdown button span {
@@ -28,7 +28,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 16px;
-    border-bottom: 0.4px solid var(--fontColorSec);
+    border-bottom: 0.4px solid var(--secondaryFont);
 }
 
 .dropdownContent {
@@ -41,7 +41,7 @@
     z-index: 1;
     overflow: hidden;
     border-radius: 6px;
-    border: 0.4px solid var(--fontColorSec);
+    border: 0.4px solid var(--secondaryFont);
     margin-top: 8px;
 } 
 
@@ -51,7 +51,7 @@
     color: white;
     padding: 8px 16px; 
     text-decoration: none;
-    border-bottom: 0.4px solid var(--fontColorSec);
+    border-bottom: 0.4px solid var(--secondaryFont);
     text-wrap: nowrap;
 }
 

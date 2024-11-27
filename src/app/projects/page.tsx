@@ -20,7 +20,7 @@ function page() {
                 <h1><Link href="/projects">{item.name}</Link></h1>
                 <h2>{item.description}</h2>
                 <div className="langContainer">
-                  <div className="langColor" style={{backgroundColor: `${item.color}`}}></div>
+                  <div className="langColor" style={{backgroundColor: `var(--${item.lang})`}}></div>
                   <p>{item.lang}</p>
                 </div>
               </div>
