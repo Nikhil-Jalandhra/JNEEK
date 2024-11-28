@@ -29,7 +29,7 @@ export default function Home() {
           <h1><span><GoRepo/></span><Link className="blueLink" target="blank" href={item.link}>{item.name}</Link><p className="publicTag">Public</p></h1>
           <p className="pinnedProjectsDetails">{item.description}</p>
           <div className="pinnedProjectsMinor">
-              <div className="langColor" style={{backgroundColor: `${item.color}`}}></div><p>{item.lang}</p>
+              <div className="langColor" style={{backgroundColor: `var(--${item.lang})`}}></div><p>{item.lang}</p>
               <div className="pinnedProjectStar"><FaRegStar/></div><p>{item.star}</p>
           </div>
         </div>
