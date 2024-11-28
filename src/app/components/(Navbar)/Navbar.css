@@ -188,3 +188,13 @@
 .navLinkButton a:hover {
     background-color: var(--navHover);
 }
+
+.navProjectLength {
+    display: inline;
+    border: 1px solid var(--secondaryFont);
+    border-radius: 10px;
+    padding: 1px 7px;
+    margin-left: 10px;
+    background-color: var(--btn-base);
+    color: white;
+}

@@ -30,7 +30,7 @@ const project = [
         star: "1",
         link: "https://quiz-app-my-first-project.vercel.app/",
         date: "5-12-24"
-      }
+      },
 ];
 
 export default project;

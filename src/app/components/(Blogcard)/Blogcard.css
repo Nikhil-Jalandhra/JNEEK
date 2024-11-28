@@ -1,7 +1,7 @@
 .blogCardContainer {
-    /* min-width: 100px; */
+    min-width: 200px;
     border: 1px solid var(--secondaryFont);
-    border-radius: 10px;
+    border-radius: 8px;
     padding: 25px;
 }
 
@@ -21,8 +21,12 @@
 .blogCardContainer button {
     font-size: 12px;
     border-radius: 5px;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border: 1px solid var(--secondaryFont);
-    background-color: #2A313C;
+    background-color: var(--btn-base);
     color: white;
+}
+
+.blogCardContainer button:hover {
+    background-color: var(--btn-hover);
 }

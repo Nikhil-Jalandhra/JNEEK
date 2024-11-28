@@ -2,6 +2,7 @@
 import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
+import project from "../../../../database/projects";
 
 import { GoGitPullRequest } from "react-icons/go";
 import { LuInbox } from "react-icons/lu";
@@ -31,7 +32,9 @@ function Navbar() {
     {
       navName: "Projects",
       navLink: "/projects",
-      navIcon: <MdWork/>
+      navIcon: <MdWork/>,
+      navProjectLength: project.length,
+      navClassName: "navProjectLength"
     },
     {
       navName: "Blogs",
@@ -82,7 +85,11 @@ function Navbar() {
           {navLinks.map((item, index)=> (
             <div key={index} className="navLinkContainer">
               <div className="navLinkButton" key={index}>
-                <Link href={item.navLink}><span>{item.navIcon}</span>{item.navName}</Link>
+                <Link href={item.navLink}>
+                  <span>{item.navIcon}</span>
+                  {item.navName}
+                  <div className={item?.navClassName}>{item?.navProjectLength}</div>
+                </Link>
               </div>
               <div className={item.navLink == pathName ? "navLinkUnderLine" : ""} ></div>
             </div>
