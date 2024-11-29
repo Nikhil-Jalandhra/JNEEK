@@ -57,7 +57,7 @@ function Navbar() {
           <RxHamburgerMenu />
         </div>
         <img src="/JNEEK.webp" alt="logo" />
-        <h1><Link href='/' >Nikhil-Jalandhra</Link></h1>
+        <Link href='/' ><h1>Nikhil-Jalandhra</h1></Link>
       </div>
       <div className="navSecondSection">
         <div className="navInput">
