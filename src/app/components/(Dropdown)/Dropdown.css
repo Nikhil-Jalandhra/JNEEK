@@ -31,6 +31,15 @@
     border-bottom: 0.4px solid var(--secondaryFont);
 }
 
+.dropdownLable span {
+    font-size: 18px;
+    color: var(--secondaryFont);
+}
+
+.dropdownLable span:hover {
+    color: var(--primaryFont);
+}
+
 .dropdownContent {
     position: absolute;
     min-width: 300px;

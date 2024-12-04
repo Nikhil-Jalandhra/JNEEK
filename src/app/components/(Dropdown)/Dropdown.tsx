@@ -3,14 +3,15 @@ import "./Dropdown.css";
 import { FaSortDown } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
 import { MdCheck } from "react-icons/md";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 
 function Dropdown({children}) {
 
     const {name, select, list} = children;
+    const dropDownRef = useRef(null);
     const [showDropDown, setShowDropDown] = useState("none");
 
-    const dropDwonToggle = () => {
+    const dropDownToggle = () => {
       if (showDropDown === "none") {
         setShowDropDown("block")
       }else {
@@ -18,14 +19,32 @@ function Dropdown({children}) {
       }
     };
 
+    const dropDownShow = () => {
+      setShowDropDown("none");
+    };
+    
+    useEffect(() => {
+      const handleClickOutside = (e: MouseEvent) => {
+          if (!dropDownRef.current?.contains(e.target)) {
+            setShowDropDown("none");
+          }
+      };
+    
+      document.addEventListener('mousedown', handleClickOutside);
+
+      return () => {
+        document.removeEventListener('mousedown', handleClickOutside);
+      };
+    }, []);
+
   return (
     <div>
-      <div className="dropdown"> 
-            <button onClick={dropDwonToggle}>{name}<span><FaSortDown/></span> </button> 
+      <div className="dropdown" ref={dropDownRef}> 
+            <button onClick={dropDownToggle}>{name}<span><FaSortDown/></span> </button> 
             <div className="dropdownContent" style={{display: `${showDropDown}`}}> 
                 <div className="dropdownLable">
                 <p>Select {select}</p>
-                <span><RxCross2/></span>
+                <span onClick={dropDownShow}><RxCross2/></span>
                 </div>
                 <a href="#"><span><MdCheck style={{ display: "block" }} className="dropDownCross"/></span>All</a> 
                 {list.map((item, index)=> (
