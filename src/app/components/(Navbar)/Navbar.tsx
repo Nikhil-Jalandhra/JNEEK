@@ -3,6 +3,7 @@ import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
 import project from "../../../../database/projects";
+import Dropdown from "../(Dropdown)/Dropdown";
 
 import { GoGitPullRequest } from "react-icons/go";
 import { LuInbox } from "react-icons/lu";
@@ -68,6 +69,7 @@ function Navbar() {
           <span><FaPlus/></span>
           <span><FaSortDown/></span>
         </div>
+        <Dropdown children={{name: <FaPlus/>, select: "All", list: ["Just fun", "nothing"]}}/>
         <div className="navReviewButton">
           <GoIssueOpened/>
         </div>
