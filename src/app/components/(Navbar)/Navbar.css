@@ -92,6 +92,8 @@
 }
 
 .navDropdown {
+    cursor: pointer;
+    position: relative;
     border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     height: 30px;
@@ -100,6 +102,34 @@
     padding: 0 5px;
     margin-right: 8px;
 }
+
+.navToolLip {
+    display: none;
+    text-wrap: nowrap;
+    font-size: 13px;
+    transition: 0.1s;
+    opacity: 0;
+    background-color: var(--primaryFont);
+    position: absolute;
+    bottom: -105%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: black;
+    border-radius: 6px;
+    padding: 5px 8px;
+}
+
+.navDropdown:hover .navToolLip {
+    opacity: 1;
+    display: block;
+}
+
+@keyframes example {
+    0%   {display: none;}
+    25%  {display: block; }
+    50%  {opacity: 1;}
+    100% {background-color: green;}
+  }
 
 .navDropdown span{
     margin: 0 5px;
@@ -111,6 +141,7 @@
 .navPullRequest,
 .navReviewButton {
     display: flex;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
     border: 1px solid var(--secondaryFont);
