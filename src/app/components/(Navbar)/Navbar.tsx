@@ -79,6 +79,9 @@ function Navbar() {
         </div>
         <div className="navResumeDownload">
           <LuInbox/>
+          <div className="navToolLip">
+          Download my Resume
+        </div>
         </div>
         <div className="navHeroimg">
           <img src="/hero.webp" alt="heroImg" />
