@@ -1,14 +1,16 @@
 .toolip {
     text-wrap: nowrap;
     font-size: 13px;
-    transition: 0.1s;
-    opacity: 1;
+    transition: opacity 0.1s, transform 0.1s, visibility 0.1s;
+    opacity: 0;
+    visibility: hidden;
     background-color: var(--primaryFont);
     position: absolute;
-    bottom: -120%;
+    bottom: -105%;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.95);
     color: black;
     border-radius: 6px;
     padding: 5px 8px;
+    pointer-events: none;
 }
