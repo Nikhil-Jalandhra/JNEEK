@@ -1,4 +1,4 @@
-.toolip {
+.toolTip {
     text-wrap: nowrap;
     font-size: 13px;
     transition: opacity 0.1s, transform 0.1s, visibility 0.1s;

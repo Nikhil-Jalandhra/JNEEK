@@ -2,7 +2,7 @@ import React from 'react';
 
 function Toolip({children}) {
   return (
-    <div className='toolip'>
+    <div className='toolTip'>
       {children}
     </div>
   );

@@ -67,7 +67,7 @@ function Navbar() {
         <div className="navDropdown">
           <span><FaPlus/></span>
           <span><FaSortDown/></span>
-        <div className="navToolLip">
+        <div className="navToolTip">
           Oh checking deatils...
         </div>
         </div>
@@ -79,7 +79,7 @@ function Navbar() {
         </div>
         <div className="navResumeDownload">
           <LuInbox/>
-          <div className="navToolLip">
+          <div className="navToolTip">
           Download my Resume
         </div>
         </div>

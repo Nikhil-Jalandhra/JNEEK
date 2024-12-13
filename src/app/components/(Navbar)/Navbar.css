@@ -103,7 +103,7 @@
     margin-right: 8px;
 }
 
-.navToolLip {
+.navToolTip {
     text-wrap: nowrap;
     font-size: 13px;
     transition: opacity 0.1s, transform 0.1s, visibility 0.1s;
@@ -120,7 +120,7 @@
     pointer-events: none;
 }
 
-.navDropdown:hover .navToolLip {
+.navDropdown:hover .navToolTip {
     opacity: 1;
     visibility: visible; 
     transform: translateX(-50%) scale(1);
@@ -157,7 +157,7 @@
     background-color: var(--navHover);
 }
 
-.navResumeDownload:hover .navToolLip {
+.navResumeDownload:hover .navToolTip {
     opacity: 1;
     visibility: visible; 
     transform: translateX(-50%) scale(1);
