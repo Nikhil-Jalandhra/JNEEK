@@ -1,6 +1,6 @@
-import React from 'react';
+import "./ToolTip.css"
 
-function Toolip({children}) {
+function ToolTip({children}) {
   return (
     <div className='toolTip'>
       {children}
@@ -8,4 +8,4 @@ function Toolip({children}) {
   );
 }
 
-export default Toolip;
+export default ToolTip;

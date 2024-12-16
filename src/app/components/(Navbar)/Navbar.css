@@ -93,7 +93,6 @@
 
 .navDropdown {
     cursor: pointer;
-    position: relative;
     border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     height: 30px;
@@ -102,31 +101,6 @@
     padding: 0 5px;
     margin-right: 8px;
 }
-
-.navToolTip {
-    text-wrap: nowrap;
-    font-size: 13px;
-    transition: opacity 0.1s, transform 0.1s, visibility 0.1s;
-    opacity: 0;
-    visibility: hidden;
-    background-color: var(--primaryFont);
-    position: absolute;
-    bottom: -105%;
-    left: 50%;
-    transform: translateX(-50%) scale(0.95);
-    color: black;
-    border-radius: 6px;
-    padding: 5px 8px;
-    pointer-events: none;
-}
-
-.navDropdown:hover .navToolTip {
-    opacity: 1;
-    visibility: visible; 
-    transform: translateX(-50%) scale(1);
-    pointer-events: auto;
-}
-
 
 .navDropdown span{
     margin: 0 5px;

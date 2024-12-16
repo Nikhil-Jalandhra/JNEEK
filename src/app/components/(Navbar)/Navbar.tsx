@@ -3,6 +3,7 @@ import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
 import project from "../../../../database/projects";
+import ToolTip from "../(toolTip)/ToolTip";
 
 import { GoGitPullRequest } from "react-icons/go";
 import { LuInbox } from "react-icons/lu";
@@ -60,28 +61,27 @@ function Navbar() {
         <Link href='/' ><h1>Nikhil-Jalandhra</h1></Link>
       </div>
       <div className="navSecondSection">
-        <div className="navInput">
+        <div className="navInput toolTipParent">
         <FiSearch className="navInputSearch"/>Type<span>/</span>to search
+        <ToolTip children={"props"}/>
         </div>
         <div className="navDivider"></div>
-        <div className="navDropdown">
+        <div className="navDropdown toolTipParent">
           <span><FaPlus/></span>
           <span><FaSortDown/></span>
-        <div className="navToolTip">
-          Oh checking deatils...
+          <ToolTip children={"oh checking details..."}/>
         </div>
-        </div>
-        <div className="navReviewButton">
+        <div className="navReviewButton toolTipParent">
           <GoIssueOpened/>
+          <ToolTip children={"props"}/>
         </div>
-        <div className="navPullRequest">
+        <div className="navPullRequest toolTipParent">
           <GoGitPullRequest/>
+          <ToolTip children={"props"}/>
         </div>
-        <div className="navResumeDownload">
+        <div className="navResumeDownload toolTipParent">
           <LuInbox/>
-          <div className="navToolTip">
-          Download my Resume
-        </div>
+          <ToolTip children={"Download Resume"}/>
         </div>
         <div className="navHeroimg">
           <img src="/hero.webp" alt="heroImg" />

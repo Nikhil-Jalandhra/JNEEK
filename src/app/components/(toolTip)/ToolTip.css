@@ -1,3 +1,7 @@
+.toolTipParent {
+    position: relative;
+}
+
 .toolTip {
     text-wrap: nowrap;
     font-size: 13px;
@@ -13,4 +17,11 @@
     border-radius: 6px;
     padding: 5px 8px;
     pointer-events: none;
+}
+
+.toolTipParent:hover .toolTip {
+    opacity: 1;
+    visibility: visible; 
+    transform: translateX(-50%) scale(1);
+    pointer-events: auto;
 }
