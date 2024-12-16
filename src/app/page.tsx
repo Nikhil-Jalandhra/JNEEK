@@ -3,6 +3,7 @@ import project from "@/../database/projects.js";
 import { GoRepo } from "react-icons/go";
 import { FaRegStar } from "react-icons/fa";
 import Link from "next/link";
+import ToolTip from "./components/(toolTip)/ToolTip";
 
 export default function Home() {  
 
@@ -26,7 +27,16 @@ export default function Home() {
       <div className="overviewProjects">
         {project.map((item, index)=> (
           <div key={index} className="pinnedProjects">
-          <h1><span><GoRepo/></span><Link className="blueLink" target="blank" href={item.link}>{item.name}</Link><p className="publicTag">Public</p></h1>
+          <h1>
+            <span>
+              <GoRepo/>
+            </span>
+            <Link className="blueLink toolTipParent" target="blank" href={item.link}>
+              {item.name}
+            <ToolTip children={item.name}/>
+            </Link>
+              <p className="publicTag">Public</p>
+          </h1>
           <p className="pinnedProjectsDetails">{item.description}</p>
           <div className="pinnedProjectsMinor">
               <div className="langColor" style={{backgroundColor: `var(--${item.lang})`}}></div><p>{item.lang}</p>
