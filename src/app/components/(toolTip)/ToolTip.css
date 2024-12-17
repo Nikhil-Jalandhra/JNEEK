@@ -4,14 +4,13 @@
 
 .toolTip {
     text-wrap: nowrap;
-    margin-top: 50px;
     font-size: 13px;
     transition: opacity 0.1s, transform 0.1s, visibility 0.1s;
     opacity: 0;
     visibility: hidden;
     background-color: var(--primaryFont);
     position: absolute;
-    bottom: -100%;
+    bottom: calc(-100% - 4px);
     left: 50%;
     transform: translateX(-50%) scale(0.95);
     color: black;

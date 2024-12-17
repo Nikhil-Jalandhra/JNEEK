@@ -43,6 +43,7 @@
 .blueLink {
     text-decoration: none;
     color: var(--linkFont);
+    height: 20px;
 }
 
 .blueLink:hover {

@@ -61,9 +61,8 @@ function Navbar() {
         <Link href='/' ><h1>Nikhil-Jalandhra</h1></Link>
       </div>
       <div className="navSecondSection">
-        <div className="navInput toolTipParent">
+        <div className="navInput">
         <FiSearch className="navInputSearch"/>Type<span>/</span>to search
-        <ToolTip children={"props"}/>
         </div>
         <div className="navDivider"></div>
         <div className="navDropdown toolTipParent">
