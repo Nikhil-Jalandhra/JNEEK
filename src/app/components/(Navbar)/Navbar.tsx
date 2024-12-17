@@ -6,7 +6,7 @@ import project from "../../../../database/projects";
 import ToolTip from "../(toolTip)/ToolTip";
 
 import { GoGitPullRequest } from "react-icons/go";
-import { LuInbox } from "react-icons/lu";
+import { MdDownload } from "react-icons/md";
 import { GoIssueOpened } from "react-icons/go";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { FaSortDown } from "react-icons/fa";
@@ -68,18 +68,18 @@ function Navbar() {
         <div className="navDropdown toolTipParent">
           <span><FaPlus/></span>
           <span><FaSortDown/></span>
-          <ToolTip children={"oh checking details..."}/>
+          <ToolTip children={"Oh you"}/>
         </div>
         <div className="navReviewButton toolTipParent">
           <GoIssueOpened/>
-          <ToolTip children={"props"}/>
+          <ToolTip children={"are"}/>
         </div>
         <div className="navPullRequest toolTipParent">
           <GoGitPullRequest/>
-          <ToolTip children={"props"}/>
+          <ToolTip children={"checking details..."}/>
         </div>
         <div className="navResumeDownload toolTipParent">
-          <LuInbox/>
+          <MdDownload/>
           <ToolTip children={"Download Resume"}/>
         </div>
         <div className="navHeroimg">
