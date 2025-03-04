@@ -3,7 +3,7 @@ import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
 import project from "../../../../database/projects";
-import ToolTip from "../(toolTip)/ToolTip";
+import ToolTip from "../(ToolTip)/ToolTip";
 
 import { GoGitPullRequest } from "react-icons/go";
 import { MdDownload } from "react-icons/md";
@@ -20,6 +20,7 @@ import { RiMessage3Fill } from "react-icons/ri";
 import { FaUserGraduate } from "react-icons/fa";
 import { RiBox3Fill } from "react-icons/ri";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 
 function Navbar() {
@@ -57,8 +58,8 @@ function Navbar() {
         <div className="navFirstSectionBox">
           <RxHamburgerMenu />
         </div>
-        <img src="/JNEEK.webp" alt="logo" />
-        <Link href='/' ><h1>Nikhil-Jalandhra</h1></Link>
+        <Image width={512} height={512} src="/univ-images/JNEEK.webp" alt="logo" />
+        <Link href='/' ><h2>Nikhil-Jalandhra</h2></Link>
       </div>
       <div className="navSecondSection">
         <div className="navInput">
@@ -83,19 +84,17 @@ function Navbar() {
           <ToolTip children={"Download Resume"}/>
         </div>
         <div className="navHeroimg">
-          <img src="/hero.webp" alt="heroImg" />
+          <Image width={827} height={1063} src="/univ-images/hero.webp" alt="heroImg" />
         </div>
       </div>
       <div className="navBaseSection">
           {navLinks.map((item, index)=> (
             <div key={index} className="navLinkContainer">
-              <div className="navLinkButton" key={index}>
-                <Link href={item.navLink}>
+                <Link className="navLinkButton" key={index} href={item.navLink}>
                   <span>{item.navIcon}</span>
-                  {item.navName}
+                  <h2 className={item.navLink == pathName ? "navLinkFontBold" : "navLinkFontSimple"} >{item.navName}</h2>
                   <div className={item?.navClassName}>{item?.navProjectLength}</div>
                 </Link>
-              </div>
               <div className={item.navLink == pathName ? "navLinkUnderLine" : ""} ></div>
             </div>
           ))}

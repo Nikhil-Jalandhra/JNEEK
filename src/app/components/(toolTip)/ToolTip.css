@@ -4,19 +4,19 @@
 
 .toolTip {
     text-wrap: nowrap;
-    font-size: 13px;
     transition: opacity 0.1s, transform 0.1s, visibility 0.1s;
     opacity: 0;
     visibility: hidden;
     background-color: var(--primaryFont);
     position: absolute;
-    bottom: calc(-100% - 4px);
+    bottom: -30px;
     left: 50%;
     transform: translateX(-50%) scale(0.95);
     color: black;
     border-radius: 6px;
     padding: 5px 8px;
     pointer-events: none;
+    z-index: 1;
 }
 
 .toolTipParent:hover .toolTip {

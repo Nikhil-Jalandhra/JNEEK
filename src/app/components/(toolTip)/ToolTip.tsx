@@ -1,6 +1,10 @@
 import "./ToolTip.css"
 
-function ToolTip({children}) {
+interface toolTipInterface {
+  children: string
+}
+
+function ToolTip({children}: toolTipInterface) {
   return (
     <div className='toolTip'>
       {children}

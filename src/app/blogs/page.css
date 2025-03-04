@@ -1,6 +1,6 @@
-.blogPagecontainer {
+/* .blogPagecontainer {
     
-}
+} */
 
 .blogPageHeader {
     width: 100%;
@@ -9,9 +9,15 @@
     align-items: center;
 }
 
-.blogPageHeader img {
+.blogPageImg {
     width: 60px;
+    height: 60px;
     margin-bottom: 10px;
+}
+
+.blogPageImg img {
+    width: 100%;
+    height: 100%;
 }
 
 .blogPageHeader h1 {

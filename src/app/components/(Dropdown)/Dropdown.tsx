@@ -5,10 +5,18 @@ import { RxCross2 } from "react-icons/rx";
 import { MdCheck } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 
-function Dropdown({children}) {
+interface dropdownInterface {
+  children: {
+    name: string;
+    select: string;
+    list: string[];
+  }
+}
+
+function Dropdown({children}: dropdownInterface) {
 
     const {name, select, list} = children;
-    const dropDownRef = useRef(null);
+    const dropDownRef = useRef<HTMLDivElement>(null);
     const [showDropDown, setShowDropDown] = useState("none");
 
     const dropDownToggle = () => {
@@ -25,7 +33,7 @@ function Dropdown({children}) {
     
     useEffect(() => {
       const handleClickOutside = (e: MouseEvent) => {
-          if (!dropDownRef.current?.contains(e.target)) {
+          if (dropDownRef.current && !dropDownRef.current?.contains(e.target as Node)) {
             setShowDropDown("none");
           }
       };

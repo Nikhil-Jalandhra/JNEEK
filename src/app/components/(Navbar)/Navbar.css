@@ -3,7 +3,7 @@
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     width: 100%;
-    height: 100px;
+    height: 105px;
     padding: 0 15px;
     border-bottom: 1px solid var(--secondaryFont);
 }
@@ -12,7 +12,7 @@
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     width: 50%;
-    height: 60px;
+    height: 70px;
     display: flex;
     align-items: center;
 }
@@ -22,21 +22,21 @@
     border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     display: flex;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.4rem;
 }
 
 .navFirstSection img {
     margin-right: 8px;
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
 }
 
-.navFirstSection h1{
-    font-size: 14px;
+.navFirstSection h2{
     padding: 8px;
     border-radius: 5px;
 }
@@ -58,7 +58,7 @@
     height: 60px;
     display: flex;
     align-items: center;
-    justify-content: end;
+    justify-content: flex-end;
     color: var(--secondaryFont);
 }
 
@@ -69,7 +69,6 @@
     border-radius: 5px;
     width: 230px;
     height: 30px;
-    font-size: 15px;
 }
 
 .navInputSearch {
@@ -81,7 +80,6 @@
     border-radius: 3px;
     padding: 0 5px;
     margin: 0 5px;
-    font-size: 12px;
 }
 
 .navDivider {
@@ -119,7 +117,6 @@
     border-radius: 5px;
     width: 30px;
     height: 30px;
-    font-size: 15px;
     margin-right: 8px;
 }
 
@@ -158,7 +155,6 @@
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     display: flex;
-    font-size: 15px;
 }
 
 .navBaseSection span {
@@ -175,6 +171,16 @@
     margin: 0 10px;
 }
 
+
+.navLinkButton {
+    display: flex;
+    align-items: flex-end;
+    text-decoration: none;
+    color: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
 .navLinkUnderLine {
     height: 2px;
     width: 100%;
@@ -182,19 +188,15 @@
     border-radius: 5px;
 }
 
-.navLinkButton {
-    display: flex;
-    align-items: end;
+.navLinkFontSimple {
+    font-family: "Jneek-Fs-Regular";
 }
 
-.navLinkButton a {
-    text-decoration: none;
-    color: white;
-    padding: 5px 8px;
-    border-radius: 5px;
+.navLinkFontBold {
+    font-family: "Jneek-Fs-Bold";
 }
 
-.navLinkButton a:hover {
+.navLinkButton:hover {
     background-color: var(--navHover);
 }
 

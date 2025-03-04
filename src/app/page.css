@@ -2,7 +2,6 @@
     border-radius: 5px;
     padding: 20px;
     border: 1px solid var(--secondaryFont);
-    font-size: 15px;
     line-height: 22px;
 }
 
@@ -12,7 +11,6 @@
 
 .overviewHeading {
     margin: 25px 0 10px 0;
-    font-size: 15px;
 }
 
 .overviewProjects {
@@ -26,11 +24,9 @@
     padding: 15px;
     border: 1px solid var(--secondaryFont);
     color: var(--secondaryFont);
-    font-size: 13px;
 }
 
-.pinnedProjects h1 {
-    font-size: 15px;
+.pinnedProjects h2 {
     display: flex;
     align-items: center;
 }
@@ -57,7 +53,7 @@
     color: var(--secondaryFont);
     border-radius: 15px;
     padding: 2px 8px;
-    font-size: 13px;
+    font-size: var(--fs-content);
 }
 
 .pinnedProjectsDetails {
@@ -74,7 +70,6 @@
 }
 
 .pinnedProjectStar {
-    font-size: 15px;
     margin-right: 3px;
 }
 
@@ -95,10 +90,6 @@
     overflow: hidden;
 }
 
-.overviewSectionFirst h1 {
-    font-size: 15px;
-}
-
 .overviewDetails {
     display: flex;
     flex-direction: column;
@@ -115,10 +106,9 @@
 .overviewContent {
     width: 50%;
     border-right: 1px solid var(--secondaryFont);
-    font-size: 15px;
 }
 
-.overviewContent h1{
+.overviewContent h2{
     margin-bottom: 20px;
 }
 
@@ -128,7 +118,6 @@
 
 .overviewContentParagraph span {
     margin-right: 10px;
-    font-size: 15px;
 }
 
 .overviewDays {
@@ -154,16 +143,15 @@
 .overviewSectionSecond {
     width: 15%;
     padding-left: 20px;
-    font-size: 13px;
     display: flex;
     flex-direction: column;
 }
 
-.overviewSectionSecond span{
+.learningYears{
     margin-bottom: 15px;
 }
 
-.nonHiglightedYear {
+.learningYears h2 {
     padding-left: 15px;
 }
 
@@ -171,5 +159,5 @@
     display: flex;
     border-radius: 5px;
     background-color: #194FB1;
-    padding: 7px 15px;
+    padding: 7px 0px;
 }
