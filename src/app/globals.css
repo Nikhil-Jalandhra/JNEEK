@@ -25,9 +25,13 @@
   
   /* ----------------Font Size------------------ */
 
-  --fs-head: 2rem;
-  --fs-sub-head: 1.2rem;
-  --fs-content: 1.1rem;
+  --fs-head-lg: 2rem;
+  --fs-head-md: 1.8rem;
+  --fs-head-sm: 1.2rem;
+
+  --fs-body: 1.1rem; 
+
+  --fs-label: 1rem; 
 
 }
 
@@ -54,17 +58,17 @@ body {
   background-color: var(--background);
   color: var(--primaryFont);
   font-family: "Jneek-Fs-Regular", sans-serif;
-  font-size: var(--fs-content);
+  font-size: var(--fs-body);
 }
 
 h1 {
-  font-size: var(--fs-head);
+  font-size: var(--fs-head-lg);
   font-family: "Jneek-Fs-Bold";
 }
 
 h2 {
   font-weight: 300;
-  font-size: var(--fs-sub-head);
+  font-size: var(--fs-head-sm);
   font-family: "Jneek-Fs-Bold";
 }
 

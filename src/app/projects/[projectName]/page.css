@@ -1,0 +1,59 @@
+.aboutProjectContainer {
+    width: 100%;
+    height: 80vh;
+    padding: 20px 150px;
+    display: flex;
+}
+
+.aboutProjectDetail {
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    /* background-color: darkslategrey; */
+}
+
+.aboutProjectDetail p {
+    padding: 5px 0;
+}
+
+.aboutProjectTech {
+    padding-bottom: 10px;
+}
+
+.aboutProjectTech li {
+    margin: 3px 0;
+}
+
+.aboutProjectImageContainer {
+    min-width: 410px;
+    height: 550px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.aboutProjectImageContainer::-webkit-scrollbar {
+    width: 5px;
+}
+
+.aboutProjectImageContainer::-webkit-scrollbar-track {
+    background: var(--background);
+    border-radius: 15px;
+}
+
+.aboutProjectImageContainer::-webkit-scrollbar-thumb {
+    background: var(--primaryFont);
+    border-radius: 15px;
+}
+
+.aboutProjectImages {
+    width: 400px;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0px 5px 20px 5px;
+}
+
+.aboutProjectImages img {
+    width: 100%;
+    height: 100%;
+}

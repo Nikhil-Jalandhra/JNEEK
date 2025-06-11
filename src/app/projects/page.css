@@ -34,18 +34,21 @@
     padding: 30px 0;
 }
 
-.allProjectcontainer h1 a {
+.allProjectcontainer h2 a {
     color: var(--linkFont);
     text-decoration: none;
 }
 
-.allProjectcontainer h1 a:hover {
+.allProjectcontainer h2 a:hover {
     text-decoration: underline 1px;
 }
 
 .allProjectcontainer h2 {
-    margin: 10px 0;
-    font-size: var(--fs-content);
+    font-size: var(--fs-head-md);
+}
+
+.projectDescription {
+    margin: 8px 0 20px 0;
 }
 
 .projectFirstSection {

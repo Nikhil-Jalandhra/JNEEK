@@ -39,13 +39,13 @@ function Navbar() {
       navClassName: "navProjectLength"
     },
     {
-      navName: "Blogs",
-      navLink: "/blogs",
+      navName: "Reflection",
+      navLink: "/reflection",
       navIcon: <RiMessage3Fill/>
     },
     {
       navName: "OutOfBox",
-      navLink: "/outofBox",
+      navLink: "/outofbox",
       navIcon: <RiBox3Fill />
     }
   ];

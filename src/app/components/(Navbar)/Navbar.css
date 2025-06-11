@@ -41,7 +41,7 @@
     border-radius: 5px;
 }
 
-.navFirstSection h1:hover{
+.navFirstSection h2:hover{
     background-color: var(--navHover);
 }
 

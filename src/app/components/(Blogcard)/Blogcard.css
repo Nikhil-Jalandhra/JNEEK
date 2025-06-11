@@ -5,26 +5,25 @@
     padding: 25px;
 }
 
-.blogCardContainer h1 {
-    font-size: 23px;
+.blogCardContainer h2 {
+    font-size: var(--fs-head-md);
     margin-bottom: 18px;
     display: flex;
     align-items: center;
 }
 
 .blogCardContainer p {
-    font-size: 13px;
     color: var(--secondaryFont);
     margin-bottom: 15px;
 }
 
 .blogCardContainer button {
-    font-size: 12px;
     border-radius: 5px;
     padding: 6px 12px;
     border: 1px solid var(--secondaryFont);
     background-color: var(--btn-base);
     color: white;
+    font-size: var(--fs-body);
 }
 
 .blogCardContainer button:hover {

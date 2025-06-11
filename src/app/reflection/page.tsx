@@ -2,9 +2,16 @@ import "./page.css";
 import Blogcard from '../components/(Blogcard)/Blogcard';
 import { FaUserGraduate } from "react-icons/fa";
 import Image from "next/image";
+import MainLayout from "../components/(MainLayout)/MainLayout";
+
+export const metadata = {
+  title: "Reflection",
+  description: "My Shadow",
+};
 
 function page() {
   return (
+    <MainLayout>
     <div className='blogPagecontainer'>
       <div className="blogPageHeader">
         <div className="blogPageImg">
@@ -23,6 +30,7 @@ function page() {
             <Blogcard/>
         </div>
     </div>
+    </MainLayout>
   );
 }
 
