@@ -22,8 +22,7 @@
     border: 1px solid var(--secondaryFont);
     border-radius: 5px;
     display: flex;
-    width: 32px;
-    height: 32px;
+    padding: 6px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,6 +38,7 @@
 .navFirstSection h2{
     padding: 8px;
     border-radius: 5px;
+    text-wrap: nowrap;
 }
 
 .navFirstSection h2:hover{
@@ -60,6 +60,15 @@
     align-items: center;
     justify-content: flex-end;
     color: var(--secondaryFont);
+}
+
+.navResponsiveInput{
+        display: none;
+        align-items: center;
+        border: 1px solid var(--secondaryFont);
+        border-radius: 5px;
+        height: 30px;
+        padding: 0 3px;
 }
 
 .navInput {
@@ -208,4 +217,45 @@
     margin-left: 10px;
     background-color: var(--btn-base);
     color: white;
+}
+
+
+/* --------------responsive------------------- */
+
+
+@media (max-width: 1010px) {
+    .navResponsiveInput{
+        display: flex;
+    }
+
+    .navInput{
+        display: none;
+    }
+}
+
+@media (max-width: 765px) {
+
+    .navInput{
+        display: none;
+    }
+
+    .navDivider,
+    .navDropdown,
+    .navReviewButton,
+    .navPullRequest{
+        display: none;
+    }
+
+    .navResumeDownload {
+        margin: 0 8px;
+    }
+
+    .navBaseSection {
+        overflow-x: scroll;
+    }
+
+    .navLinkContainer {
+        margin: 0 0px;
+    }
+
 }

@@ -17,9 +17,11 @@ function page() {
       <div className='repositoriesPage'>
           <div className="repoNav">
               <input type ="text" placeholder="Find a project..." />
+              <div className="repoNavDropdown">
               <Dropdown children={{name: "Type", select: "All", list: ["Ecomerce", "Game", "JavaScript", "UI-UX"]}}/>
               <Dropdown children={{name: "Language", select: "language", list: ["JavaScript", "Java", "PHP","TypeScript"]}}/>
               <Dropdown children={{name: "Sort", select: "order", list: ["Last Update", "Name"]}}/>
+              </div>
           </div>
             {project.map((item, index)=> (
               <div key={index} className="allProjectcontainer">

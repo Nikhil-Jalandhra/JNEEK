@@ -65,6 +65,9 @@ function Navbar() {
         <div className="navInput">
         <FiSearch className="navInputSearch"/>Type<span>/</span>to search
         </div>
+        <div className="navResponsiveInput">
+        <FiSearch className="navInputSearch"/>
+        </div>
         <div className="navDivider"></div>
         <div className="navDropdown toolTipParent">
           <span><FaPlus/></span>
