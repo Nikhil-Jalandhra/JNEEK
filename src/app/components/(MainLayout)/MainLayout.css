@@ -3,9 +3,8 @@
     min-height: 100vh;
     display: grid;
     justify-content: center;
-    /* grid-template-columns: repeat(2, 1fr); */
     grid-template-columns: max-content 60vw;
-    padding-top: 35px;
+    /* padding-top: 35px; */
 }
 
 .homeProfile {
@@ -68,7 +67,7 @@
 }
 
 .homeProfileContainer a {
-    color: var(--fontColor);
+    color: var(--linkFont);
     text-decoration: none;
 }
 
@@ -138,18 +137,12 @@
 
 }
 
-@media (max-width: 820px) {
-    .homePageSection {
-        grid-template-columns: max-content 50vw;
-    }
-}
-
 @media (max-width: 770px) {
     .homePageSection {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        padding-top: 35px;
+        /* padding-top: 35px; */
     }
 
     .homeProfile {
@@ -158,8 +151,20 @@
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        padding-right: 25px;
+        padding: 0 25px 25px 25px;
     }
+
+    .homeProfileAbout {
+        display: flex;
+        align-items: center;
+    }
+
+    .homeHeroImages{
+        width: 120px;
+        height: 120px;
+        margin-right: 10px;
+    }
+
 
     .homeProfileContainer {
         width: 100%;
@@ -179,4 +184,5 @@
     .homePageSection {
         grid-template-columns: max-content 40vw;
     }
+
 }

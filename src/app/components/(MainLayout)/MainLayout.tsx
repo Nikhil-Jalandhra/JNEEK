@@ -62,11 +62,15 @@ function MainLayout({children}: { children: React.ReactNode }) {
       <div className="homePageSection">
           <div className="homeProfile">
             <div className="homeProfileContainer">
-              <div className="homeHeroImages">
-                <Image fill priority src="/univ-images/hero.webp" alt="heroImage" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <div className="homeProfileAbout">
+                  <div className="homeHeroImages">
+                    <Image fill priority src="/univ-images/hero.webp" alt="heroImage" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+                  </div>
+                  <div>
+                    <h1 className="petName">JNEEK</h1>
+                    <h1 className="myName">Nikhil-Jalandhra<LuDot/>he/him</h1>
+                  </div>
               </div>
-              <h1 className="petName">JNEEK</h1>
-              <h1 className="myName">Nikhil-Jalandhra<LuDot/>he/him</h1>
               <button><h2>Developer</h2></button>
               <h2><span><SiGmail/></span> nikhiljalandhra@gmail.com</h2>
               <h2><span><IoLogoLinkedin/></span><Link href="https://www.linkedin.com/in/nikhil-jalandhra-1479742b0/">linkedin</Link></h2>
