@@ -13,7 +13,7 @@ const LoadingScreen = ({children}: Readonly<{
   
   useEffect(() => {
     if(path == "/"){
-      const timer = setTimeout(()=> { setSplashMount(true)} , 6000);
+      const timer = setTimeout(()=> { setSplashMount(true)} , 5000);
       return ()=> clearTimeout(timer);
     }else{
       setSplashMount(true);

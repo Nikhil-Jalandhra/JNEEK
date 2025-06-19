@@ -75,3 +75,14 @@
 .dropdownContent a:hover { 
     background-color: #212830;
 } 
+
+/* -------------responsivenes------------------- */
+
+@media (max-width: 770px) {
+
+.dropdownContent {
+    min-width: 150px;
+    left: 0;
+}
+
+}

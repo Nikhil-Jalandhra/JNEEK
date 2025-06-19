@@ -29,3 +29,18 @@
 .blogCardContainer button:hover {
     background-color: var(--btn-hover);
 }
+
+@media (max-width: 720px) {
+
+.blogCardContainer {
+    min-width: 200px;
+    border: 1px solid var(--secondaryFont);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.blogCardContainer h2 {
+    margin-bottom: 9px;
+}
+    
+}

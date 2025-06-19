@@ -142,7 +142,8 @@
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
-        /* padding-top: 35px; */
+        justify-content: center;
+        align-items: center;
     }
 
     .homeProfile {
@@ -174,7 +175,7 @@
     }
 
     .homeDynamic {
-        width: 90%;
+        padding: 0 25px;
         grid-column: 1 / -1;
         overflow: hidden;
     }

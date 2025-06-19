@@ -1,10 +1,11 @@
 import React from 'react';
+import "./page.css"
 import MainLayout from '../components/(MainLayout)/MainLayout';
 
 function page() {
   return (
     <MainLayout>
-      <div>
+      <div className='outOfBoxContainer'>
         hlo;
       </div>
     </MainLayout>

@@ -17,7 +17,7 @@
 }
 
 .splashMover{
-    animation: upDown 8s 1s ease-in-out;
+    animation: upDown 7s 1s ease-in-out;
     height: 150px;
     display: flex;
     align-items: center;
@@ -28,6 +28,7 @@
 
 .splashMover h1{
     font-size: 3rem;
+    text-wrap: nowrap;
 }
 
 @keyframes upDown {
@@ -64,4 +65,20 @@
    100%{
     transform: translateY(-150%);
    }
+}
+
+@media (max-width: 1020px) {
+
+.splashMover h1{
+    font-size: 2.1rem;
+}   
+
+}
+
+@media (max-width: 720px) {
+
+.splashMover h1{
+    font-size: 1.1rem;
+}   
+
 }

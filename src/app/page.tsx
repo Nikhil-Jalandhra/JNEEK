@@ -30,21 +30,21 @@ export default function Home() {
         <div className="overviewProjects">
           {project.map((item, index)=> (
             <div key={index} className="pinnedProjects">
-            <h2>
-              <span>
-                <GoRepo/>
-              </span>
-              <Link className="blueLink toolTipParent" target="blank" href={item.link}>
-                {item.name}
-              <ToolTip children={item.name}/>
-              </Link>
-                <p className="publicTag">Public</p>
-            </h2>
-            <p className="pinnedProjectsDetails">{item.description}</p>
-            <div className="pinnedProjectsMinor">
-                <div className="langColor" style={{backgroundColor: `var(--${item.lang})`}}></div><p>{item.lang}</p>
-                <div className="pinnedProjectStar"><h2><FaRegStar/></h2></div><p>{item.star}</p>
-            </div>
+              <h2>
+                <span>
+                  <GoRepo/>
+                </span>
+                <Link className="blueLink toolTipParent" target="blank" href={item.link}>
+                  {item.name}
+                <ToolTip children={item.name}/>
+                </Link>
+                  <p className="publicTag">Public</p>
+              </h2>
+              <p className="pinnedProjectsDetails">{item.description}</p>
+              <div className="pinnedProjectsMinor">
+                  <div className="langColor" style={{backgroundColor: `var(--${item.lang})`}}></div><p>{item.lang}</p>
+                  <div className="pinnedProjectStar"><h2><FaRegStar/></h2></div><p>{item.star}</p>
+              </div>
           </div>
           ))}
         </div>
@@ -52,7 +52,9 @@ export default function Home() {
           <div className="overviewSectionFirst">
             <h2>600 contributions in the last year</h2>
             <div className="overviewDetails">
-              <Image width={862} height={177} className="overviewDays" src="/univ-images/gitdays.webp" alt="days" />
+              <div className="overviewDaysContainer">
+                <Image width={862} height={177} className="overviewDays" src="/univ-images/gitdays.webp" alt="days" />
+              </div>
               <div className="overviewContentContainer">
               <div className="overviewContent">
                 <h2>Activity overview</h2>

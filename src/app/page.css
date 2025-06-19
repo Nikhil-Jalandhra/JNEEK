@@ -5,10 +5,6 @@
     line-height: 22px;
 }
 
-.overviewAbout p{
-    margin-bottom: 15px;
-}
-
 .overviewHeading {
     margin: 25px 0 10px 0;
 }
@@ -160,4 +156,53 @@
     border-radius: 5px;
     background-color: #194FB1;
     padding: 7px 0px;
+}
+
+
+@media (max-width: 1020px) {
+}
+
+@media (max-width: 720px) {
+
+.overviewAbout {
+    padding: 15px;
+}
+
+.overviewProjects {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+}
+
+.overviewSectionSecond {
+    display: none;
+}
+
+.overviewSectionFirst {
+    width: 100%;
+}
+.overviewDaysContainer {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.overviewDays {
+    object-fit: contain;
+    padding: 10px;
+    border-bottom: 1px solid var(--secondaryFont);
+}
+
+.overviewContentContainer {
+    display: block;
+    padding: 20px;
+}
+
+.overviewContent {
+    width: 100%;
+    border-right: none;
+}
+
+.overviewGraph {
+    width: 100%;
+}
+
 }
