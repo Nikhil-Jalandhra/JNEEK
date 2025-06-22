@@ -50,6 +50,31 @@ const SkillsArray = [
       about: "",
     },
     {
+      name: "Java",
+      image: "/skills/java.webp",
+      about: "",
+    },
+    {
+      name: "Hibernate",
+      image: "/skills/hibernate.webp",
+      about: "",
+    },
+    {
+      name: "Spring",
+      image: "/skills/spring.webp",
+      about: "",
+    },
+    {
+      name: "Spring-Boot",
+      image: "/skills/springBoot.webp",
+      about: "",
+    },
+    {
+      name: "Postgres",
+      image: "/skills/postgres.webp",
+      about: "",
+    },
+    {
       name: "PHP",
       image: "/skills/php.webp",
       about: "",
@@ -77,7 +102,8 @@ function MainLayout({children}: { children: React.ReactNode }) {
               <h2><span><FaGithub/></span><Link href="https://github.com/Nikhil-Jalandhra">git-hub</Link></h2>
               <div className="homeDivider"></div>
               <div className="homeSkillsSection">
-                <h2>Skills</h2>
+                <h2 className="homeSkillDisclamer">Skills <span>(hover more details)</span></h2>
+                <h2 className="homeSkillDisclamerResponsive">Skills <span>(click more details)</span></h2>
                 <div className="homeSkillsContainer">
                   {SkillsArray.map((item, index) => (
                     <div className="skillImageContainer toolTipParent" key={item.name}>

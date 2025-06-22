@@ -20,7 +20,7 @@ function page() {
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At esse suscipit perspiciatis numquam.</p>
       </div>
         <div className="blogCardsContainer">
-          <h1 className="blogPageHeading">Read one, atleast.</h1>
+          <h1 className="blogPageHeading">Random Thoughts.</h1>
             <Blogcard/>
             <Blogcard/>
             <Blogcard/>

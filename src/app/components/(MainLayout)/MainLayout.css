@@ -83,6 +83,13 @@
     margin: 15px 0;
 }
 
+.homeSkillDisclamer{
+    display: block;
+}
+.homeSkillDisclamerResponsive{
+    display: none;
+}
+
 .homeSkillsSection h2{
     margin: 5px 0;
 }
@@ -95,7 +102,6 @@
 .skillImageContainer {
     width: 60px;
     height: 60px;
-    margin: 5px;
     border: 2.5px solid var(--primaryFont);
     position: relative;
     border-radius: 50%;
@@ -179,6 +185,18 @@
         grid-column: 1 / -1;
         overflow: hidden;
     }
+
+.homeSkillsContainer {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.homeSkillDisclamer{
+    display: none;
+}
+.homeSkillDisclamerResponsive{
+    display: block;
+}
+
 }
 
 @media (max-width: 430px) {
