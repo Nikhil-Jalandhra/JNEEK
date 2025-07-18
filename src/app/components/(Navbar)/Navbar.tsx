@@ -3,7 +3,7 @@ import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
 import project from "../../../../database/projects";
-import ToolTip from "../(ToolTip)/ToolTip";
+import ToolTip from "../(toolTip)/ToolTip";
 
 import { GoGitPullRequest } from "react-icons/go";
 import { MdDownload } from "react-icons/md";
