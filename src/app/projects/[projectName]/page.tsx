@@ -1,50 +1,75 @@
-import "./page.css";
-import project from "../../../../database/projects";
-import Image from "next/image";
-import Link from "next/link";
-import { Metadata } from "next";
-import { notFound } from "next/navigation";
+import './page.css';
+import project from '../../../../database/projects';
+import Image from 'next/image';
+import Link from 'next/link';
+import type { Metadata, ResolvingMetadata } from 'next';
 
-type PageProps = {
-  params: {
-    projectName: string;
-  };
+type ProjectParams = { projectName: string };
+
+interface PageProps<T> {
+  params: Promise<T>;
 }
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const param = params
+export async function generateMetadata(
+  { params }: PageProps<ProjectParams>,
+  _parent: ResolvingMetadata
+): Promise<Metadata> {
+  const { projectName } = (await params) || { projectName: '' };
   return {
-    title: param.projectName,
-    description: "About Project",
+    title: projectName,
+    description: `Details about the ${projectName} project.`,
   };
 }
 
-export default async function Page({params}: PageProps) {
-  // const param = await params;
-  const data = project.find(item => item?.name === params?.projectName);
+// ✅ Dynamic Page Component
+export default async function Page({ params }: PageProps<ProjectParams>) {
+  const { projectName } = (await params) || { projectName: '' };
+  const data = project.find((item) => item?.name === projectName);
 
-  if (!data) return notFound();
-  
+  if (!data) {
+    return (
+      <div className="aboutProjectContainer">
+        <h1>🚫 Project Not Found</h1>
+        <p>No project exists with the name "{projectName}".</p>
+      </div>
+    );
+  }
+
   return (
-    <div className='aboutProjectContainer'>
+    <div className="aboutProjectContainer">
       <div className="aboutProjectDetail">
-        <h1>{data?.name}</h1>
-        <p>{data?.description}</p>
+        <h1>{data.name}</h1>
+        <p>{data.description}</p>
         <h2>Tech Stack:</h2>
-        <div className="aboutProjectTech">
-          {data?.techUsed.map((item) => (
+        <ul className="aboutProjectTech">
+          {data.techUsed.map((item) => (
             <li key={item}>{item}</li>
           ))}
-          </div>
-        <p>Visit Project: <Link href={data?.link || ""}>{data?.link}</Link></p>
-        <p>Project Repository: <Link href={data?.repo || ""}>{data?.repo}</Link></p>
-        <p>Birthday: {data?.date}</p>
-
+        </ul>
+        <p>
+          Visit Project:{' '}
+          <Link href={data.link} target="_blank" rel="noopener noreferrer">
+            {data.link}
+          </Link>
+        </p>
+        <p>
+          Project Repository:{' '}
+          <Link href={data.repo} target="_blank" rel="noopener noreferrer">
+            {data.repo}
+          </Link>
+        </p>
+        <p>Birthday: {data.date}</p>
       </div>
+
       <div className="aboutProjectImageContainer">
-        {data?.image?.map((item) => (
+        {data.image?.map((item) => (
           <div key={item} className="aboutProjectImages">
-            <Image src={item} width={1896} height={863} alt={`Screenshot of ${data.name}`}/>
+            <Image
+              src={item}
+              width={1896}
+              height={863}
+              alt={`${data.name} screenshot`}
+              unoptimized
+            />
           </div>
         ))}
       </div>
