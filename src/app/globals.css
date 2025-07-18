@@ -35,6 +35,8 @@
 
 }
 
+@import "locomotive-scroll/dist/locomotive-scroll.css";
+
 @font-face {
   font-family: "Jneek-Fs-Bold";
   src: url("/fonts/Jneek-Fs-Bold.otf") format("opentype");

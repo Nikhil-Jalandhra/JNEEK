@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     template: "%s | JNEEK"
   },
   description: "Its all about me!.",
+   icons: {
+    icon: "/univ-images/JNEEK.webp",
+  },
 };
 
 export default async function RootLayout({
@@ -22,11 +25,11 @@ export default async function RootLayout({
   return (
     <html lang="en">
       <body>
-        <LoadingScreen>
+        {/* <LoadingScreen> */}
           <Navbar/>
             {children}
           <Footer/>
-        </LoadingScreen>
+        {/* </LoadingScreen> */}
       </body>
     </html>
   );

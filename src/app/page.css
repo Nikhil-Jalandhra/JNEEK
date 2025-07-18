@@ -131,10 +131,10 @@
     align-items: center;
 }
 
-.overviewGraph img{
+/* .overviewGraph img{
     height: 250px;
     object-fit: cover;
-}
+} */
 
 .overviewSectionSecond {
     width: 15%;

@@ -6,7 +6,7 @@ const project = [
         description: "Created a food blogging website to enhance my skills with React.js",
         lang: "TypeScript",
         star: "5",
-        link: "https://goodness-in-bowl.vercel.app/",
+        link: "https://goodness-in-bowl-next-js.vercel.app/",
         repo: "https://github.com/Nikhil-Jalandhra/Goodness-In-Bowl-React",
         date: "5-12-24"
       },
