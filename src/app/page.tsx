@@ -69,22 +69,12 @@ export default function Home() {
             <h2>600 contributions in the last year</h2>
             <div className="overviewDetails">
               <div className="overviewDaysContainer">
-<<<<<<< HEAD
-                <Image 
-                  src="/univ-images/gitdays.webp" 
-                  alt="days" 
-                  width={862} 
-                  height={177} 
-                  style={{ width: '100%', height: "100%", objectFit: 'cover' }}
-                  className="overviewDays" 
-=======
                 <Image
                   width={862}
                   height={177}
                   className="overviewDays"
                   src="/univ-images/gitdays.webp"
                   alt="days"
->>>>>>> 9109ef82d58b65354f020ea87d3d092128573b1b
                 />
               </div>
               <div className="overviewContentContainer">
@@ -126,19 +116,6 @@ export default function Home() {
                     alt="graph"
                   />
                 </div>
-<<<<<<< HEAD
-              </div>
-              <div className="overviewGraph">
-                <Image
-                  src="/univ-images/gitgraph.webp"
-                  alt="graph"
-                  width={300}
-                  height={322}
-                  style={{ height: '250px', width: 'auto', objectFit: 'cover' }}
-                />
-              </div>
-=======
->>>>>>> 9109ef82d58b65354f020ea87d3d092128573b1b
               </div>
             </div>
           </div>
