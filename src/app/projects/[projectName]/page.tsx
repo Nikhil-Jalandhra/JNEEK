@@ -2,20 +2,28 @@ import "./page.css";
 import project from "../../../../database/projects";
 import Image from "next/image";
 import Link from "next/link";
+import { Metadata } from "next";
+import { notFound } from "next/navigation";
 
-export async function generateMetadata({ params }: { params: {projectName: string} } ) {
-  const { projectName } = await params;
+type PageProps = {
+  params: {
+    projectName: string;
+  };
+}
 
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const param = params
   return {
-    title: projectName,
+    title: param.projectName,
     description: "About Project",
   };
 }
 
- async function page({params}: { params: {projectName: string} }) {
+export default async function Page({params}: PageProps) {
+  // const param = await params;
+  const data = project.find(item => item?.name === params?.projectName);
 
-  const param = await params;
-  const data = project.find(item => item?.name === param?.projectName);
+  if (!data) return notFound();
   
   return (
     <div className='aboutProjectContainer'>
@@ -25,7 +33,7 @@ export async function generateMetadata({ params }: { params: {projectName: strin
         <h2>Tech Stack:</h2>
         <div className="aboutProjectTech">
           {data?.techUsed.map((item) => (
-            <li>{item}</li>
+            <li key={item}>{item}</li>
           ))}
           </div>
         <p>Visit Project: <Link href={data?.link || ""}>{data?.link}</Link></p>
@@ -36,12 +44,10 @@ export async function generateMetadata({ params }: { params: {projectName: strin
       <div className="aboutProjectImageContainer">
         {data?.image?.map((item) => (
           <div key={item} className="aboutProjectImages">
-            <Image src={item} width={1896} height={863} alt="image"/>
+            <Image src={item} width={1896} height={863} alt={`Screenshot of ${data.name}`}/>
           </div>
         ))}
       </div>
     </div>
   );
 }
-
-export default page;

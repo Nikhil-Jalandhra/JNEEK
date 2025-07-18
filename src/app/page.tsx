@@ -53,7 +53,14 @@ export default function Home() {
             <h2>600 contributions in the last year</h2>
             <div className="overviewDetails">
               <div className="overviewDaysContainer">
-                <Image width={862} height={177} className="overviewDays" src="/univ-images/gitdays.webp" alt="days" />
+                <Image 
+                  src="/univ-images/gitdays.webp" 
+                  alt="days" 
+                  width={862} 
+                  height={177} 
+                  style={{ width: '100%', height: "100%", objectFit: 'cover' }}
+                  className="overviewDays" 
+                />
               </div>
               <div className="overviewContentContainer">
               <div className="overviewContent">
@@ -67,7 +74,13 @@ export default function Home() {
                 </div>
               </div>
               <div className="overviewGraph">
-                <Image width={300} height={322} src="/univ-images/gitgraph.webp" alt="graph" />
+                <Image
+                  src="/univ-images/gitgraph.webp"
+                  alt="graph"
+                  width={300}
+                  height={322}
+                  style={{ height: '250px', width: 'auto', objectFit: 'cover' }}
+                />
               </div>
               </div>
             </div>
