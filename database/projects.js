@@ -30,7 +30,7 @@ const project = [
         description: "Cool UI-UX webstie",
         lang: "JavaScript",
         star: "4",
-        link: "https://dark-studio-j1q2lzzy9-nikhil-jalandhras-projects.vercel.app",
+        link: "https://dark-studio-alpha.vercel.app/",
         repo: "https://github.com/Nikhil-Jalandhra/Dark-Studio",
         date: "5-12-24"
       },
