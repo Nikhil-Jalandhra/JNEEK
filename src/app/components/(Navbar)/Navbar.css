@@ -130,19 +130,24 @@
 }
 
 .navDropdown:hover,
-.navResumeDownload:hover,
 .navNotification:hover,
 .navPullRequest:hover,
 .navReviewButton:hover {
     background-color: var(--navHover);
 }
 
-.navResumeDownload:hover .navToolTip {
-    opacity: 1;
-    visibility: visible; 
-    transform: translateX(-50%) scale(1);
-    pointer-events: auto;
+.navResumeDownload {
+  background-color: white;
+  color: var(--background);
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
+
+.navResumeDownload:hover {
+  background-color: var(--background);
+  color: white;
+}
+
 
 .navHeroimg {
     width: 35px;

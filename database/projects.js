@@ -10,6 +10,17 @@ const project = [
         repo: "https://github.com/Nikhil-Jalandhra/Goodness-In-Bowl-React",
         date: "5-12-24"
       },
+   {
+        name: "Api-Handle",
+        techUsed: [ "Next.js", "Node.js", "Tailwind.css", "Zustand" ],
+        image: [ "/projects-images/api1.png", "/projects-images/api2.png", "/projects-images/api3.png", "/projects-images/api4.png", "/projects-images/api5.png", "/projects-images/api6.png", "/projects-images/api7.png" ],
+        description: "Created a food blogging website to enhance my skills with React.js",
+        lang: "TypeScript",
+        star: "5",
+        link: "https://api-handle-inky.vercel.app/",
+        repo: "https://github.com/Nikhil-Jalandhra/API-Handle",
+        date: "5-12-24"
+      },
     {
         name: "Urban-Dapper",
         techUsed: [ "React", "Node.js", "TypesScript" ],

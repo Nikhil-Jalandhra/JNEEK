@@ -82,10 +82,10 @@ function Navbar() {
           <GoGitPullRequest/>
           <ToolTip children={"checking details..."}/>
         </div>
-        <div className="navResumeDownload toolTipParent">
-          <MdDownload/>
-          <ToolTip children={"Download Resume"}/>
-        </div>
+        <a href="/NikhilCV.pdf" download className="navResumeDownload toolTipParent">
+          <MdDownload style={{fontSize: "2rem"}} />
+          <ToolTip children={"Download Resume"} />
+        </a>
         <div className="navHeroimg">
           <Image width={827} height={1063} src="/univ-images/hero.webp" alt="heroImg" />
         </div>
