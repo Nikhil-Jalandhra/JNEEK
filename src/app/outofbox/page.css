@@ -1,3 +1,34 @@
 .outOfBoxContainer {
+    width: 100%;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.outOfBoxThtIcn{
+    font-size: 10rem;
+    animation: float 3s ease-in-out infinite;
+}
+
+.outOfBoxAwait{
+    color: #2E95D3;
+}
+.outOfBoxContent{
+    color: #F22C3D;
+}
+
+.outOfBoxContainer p{
+    color: var(--secondaryFont);
+    font-size: 1.2rem;
+    margin-top: 5px;
+}
+
+
+@keyframes float {
+  0% { transform: translateY(0px) rotateY(180deg); }
+  50% { transform: translateY(-10px) rotateY(180deg); }
+  100% { transform: translateY(0px) rotateY(180deg); }
 }
