@@ -1,29 +1,14 @@
+"use client";
 import './page.css';
-import project from '../../../../database/projects';
 import Image from 'next/image';
 import Link from 'next/link';
-import type { Metadata, ResolvingMetadata } from 'next';
+import { useProjects, Project } from '@/context/ProjectContext';
+import { useParams } from 'next/navigation';
 
-type ProjectParams = { projectName: string };
-
-interface PageProps<T> {
-  params: Promise<T>;
-}
-export async function generateMetadata(
-  { params }: PageProps<ProjectParams>,
-  _parent: ResolvingMetadata
-): Promise<Metadata> {
-  const { projectName } = (await params) || { projectName: '' };
-  return {
-    title: projectName,
-    description: `Details about the ${projectName} project.`,
-  };
-}
-
-// ✅ Dynamic Page Component
-export default async function Page({ params }: PageProps<ProjectParams>) {
-  const { projectName } = (await params) || { projectName: '' };
-  const data = project.find((item) => item?.name === projectName);
+export default function Page() {
+  const { projectName } = useParams() as { projectName: string };
+  const projects = useProjects();
+  const data: Project | undefined = projects.find((item: Project) => item?.name === projectName);
 
   if (!data) {
     return (
@@ -41,18 +26,18 @@ export default async function Page({ params }: PageProps<ProjectParams>) {
         <p>{data.description}</p>
         <h2>Tech Stack:</h2>
         <ul className="aboutProjectTech">
-          {data.techUsed.map((item) => (
+          {data.techUsed.map((item: string) => (
             <li key={item}>{item}</li>
           ))}
         </ul>
         <p>
-          Visit Project:{' '}
+          Visit Project:{" "}
           <Link href={data.link} target="_blank" rel="noopener noreferrer">
             {data.link}
           </Link>
         </p>
         <p>
-          Project Repository:{' '}
+          Project Repository:{" "}
           <Link href={data.repo} target="_blank" rel="noopener noreferrer">
             {data.repo}
           </Link>
@@ -61,7 +46,7 @@ export default async function Page({ params }: PageProps<ProjectParams>) {
       </div>
 
       <div className="aboutProjectImageContainer">
-        {data.image?.map((item) => (
+        {data.image?.map((item: string) => (
           <div key={item} className="aboutProjectImages">
             <Image
               src={item}

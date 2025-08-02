@@ -2,7 +2,7 @@
 import "./Navbar.css";
 import React from "react";
 import Link from "next/link";
-import project from "../../../../database/projects";
+import { useProjects } from "@/context/ProjectContext";
 import ToolTip from "../(toolTip)/ToolTip";
 
 import { GoGitPullRequest } from "react-icons/go";
@@ -25,6 +25,8 @@ import Image from "next/image";
 
 function Navbar() {
 
+  const projects = useProjects();
+
   const navLinks = [
     {
       navName: "About",
@@ -35,7 +37,7 @@ function Navbar() {
       navName: "Projects",
       navLink: "/projects",
       navIcon: <MdWork/>,
-      navProjectLength: project.length,
+      navProjectLength: projects.length,
       navClassName: "navProjectLength"
     },
     {

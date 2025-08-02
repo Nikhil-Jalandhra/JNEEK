@@ -1,7 +1,7 @@
 import "./page.css";
-import Blogcard from '../components/(Blogcard)/Blogcard';
+import Blogcard from '@/app/components/(Blogcard)/Blogcard';
 import Image from "next/image";
-import MainLayout from "../components/(MainLayout)/MainLayout";
+import MainLayout from "@/app/components/(MainLayout)/MainLayout";
 
 export const metadata = {
   title: "Reflection",

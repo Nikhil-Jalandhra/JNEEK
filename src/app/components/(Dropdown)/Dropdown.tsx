@@ -5,61 +5,74 @@ import { RxCross2 } from "react-icons/rx";
 import { MdCheck } from "react-icons/md";
 import { useState, useEffect, useRef } from "react";
 
-interface dropdownInterface {
-  children: {
-    name: string;
-    select: string;
-    list: string[];
-  }
+interface DropdownProps {
+  name: string;
+  select: string;
+  list: string[];
+  onClick: (item: string) => void;
+  active: string;
 }
 
-function Dropdown({children}: dropdownInterface) {
+function Dropdown({ name, select, list, onClick, active }: DropdownProps) {
+  const dropDownRef = useRef<HTMLDivElement>(null);
+  const [showDropDown, setShowDropDown] = useState(false);
 
-    const {name, select, list} = children;
-    const dropDownRef = useRef<HTMLDivElement>(null);
-    const [showDropDown, setShowDropDown] = useState("none");
+  const toggleDropdown = () => setShowDropDown(prev => !prev);
+  const hideDropdown = () => setShowDropDown(false);
 
-    const dropDownToggle = () => {
-      if (showDropDown === "none") {
-        setShowDropDown("block")
-      }else {
-        setShowDropDown("none")
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropDownRef.current && !dropDownRef.current.contains(e.target as Node)) {
+        setShowDropDown(false);
       }
     };
-
-    const dropDownShow = () => {
-      setShowDropDown("none");
-    };
-    
-    useEffect(() => {
-      const handleClickOutside = (e: MouseEvent) => {
-          if (dropDownRef.current && !dropDownRef.current?.contains(e.target as Node)) {
-            setShowDropDown("none");
-          }
-      };
-    
-      document.addEventListener('mousedown', handleClickOutside);
-
-      return () => {
-        document.removeEventListener('mousedown', handleClickOutside);
-      };
-    }, []);
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <div>
-      <div className="dropdown" ref={dropDownRef}> 
-            <button onClick={dropDownToggle}>{name}<span><FaSortDown/></span> </button> 
-            <div className="dropdownContent" style={{display: `${showDropDown}`}}> 
-                <div className="dropdownLable">
-                <p>Select {select}</p>
-                <span onClick={dropDownShow}><RxCross2/></span>
-                </div>
-                <a href="#"><span><MdCheck style={{ display: "block" }} className="dropDownCross"/></span>All</a> 
-                {list.map((item, index)=> (
-                    <a key={index} href="#"><span><MdCheck  className="dropDownCross"/></span>{item}</a>
-                ))} 
-            </div> 
+    <div className="dropdown" ref={dropDownRef}>
+      <button onClick={toggleDropdown}>
+        {name}
+        <span><FaSortDown /></span>
+      </button>
+      <div className="dropdownContent" style={{ display: showDropDown ? "block" : "none" }}>
+        <div className="dropdownLable">
+          <p>Select</p>
+          <span onClick={hideDropdown}><RxCross2 /></span>
         </div>
+
+        <a
+          href="#"
+          onClick={() => onClick("All")}
+          className={active === "All" ? "active" : ""}
+        >
+          <span>
+            <MdCheck
+              className="dropDownCross"
+              style={{ display: active === "All" ? "block" : "none" }}
+            />
+          </span>
+          All
+        </a>
+
+        {list.map((item, index) => (
+          <a
+            key={index}
+            onClick={() => onClick(item)}
+            href="#"
+            className={item === active ? "active" : ""}
+          >
+            <span>
+              <MdCheck
+                className="dropDownCross"
+                style={{ display: item === active ? "block" : "none" }}
+              />
+            </span>
+            {item}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 import './MainLayout.css';
 import Image from 'next/image';
 import React from 'react';
-import ToolTip from '../(toolTip)/ToolTip';
+import ToolTip from '@/app/components/(toolTip)/ToolTip';
 import { LuDot } from 'react-icons/lu';
 import { SiGmail } from 'react-icons/si';
 import { IoLogoLinkedin } from 'react-icons/io';

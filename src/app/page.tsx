@@ -1,13 +1,12 @@
 import './page.css';
-import project from '@/../database/projects.js';
 import { GoRepo } from 'react-icons/go';
-import { FaRegStar } from 'react-icons/fa';
 import Link from 'next/link';
-import ToolTip from './components/(toolTip)/ToolTip';
 import Image from 'next/image';
-import MainLayout from './components/(MainLayout)/MainLayout';
+import MainLayout from '@/app/components/(MainLayout)/MainLayout';
+import OverViewProjects from '@/app/components/(OverViewProjects)/OverViewProjects';
 
 export default function Home() {
+
   return (
     <MainLayout>
       <div>
@@ -31,39 +30,9 @@ export default function Home() {
             development.
           </h2>
         </div>
-        <h2 className="overviewHeading">Projects</h2>
-        <div className="overviewProjects">
-          {project.map((item, index) => (
-            <div key={index} className="pinnedProjects">
-              <h2>
-                <span>
-                  <GoRepo />
-                </span>
-                <Link
-                  className="blueLink toolTipParent"
-                  target="blank"
-                  href={item.link}>
-                  {item.name}
-                  <ToolTip children={item.name} />
-                </Link>
-                <p className="publicTag">Public</p>
-              </h2>
-              <p className="pinnedProjectsDetails">{item.description}</p>
-              <div className="pinnedProjectsMinor">
-                <div
-                  className="langColor"
-                  style={{ backgroundColor: `var(--${item.lang})` }}></div>
-                <p>{item.lang}</p>
-                <div className="pinnedProjectStar">
-                  <h2>
-                    <FaRegStar />
-                  </h2>
-                </div>
-                <p>{item.star}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+
+        <OverViewProjects/>
+        
         <div className="overviewDetailsContainer">
           <div className="overviewSectionFirst">
             <h2>600 contributions in the last year</h2>

@@ -1,9 +1,12 @@
+import React from "react";
 import type { Metadata } from "next";
 import "./globals.css";
 import "./layout.css";;
 import Footer from "./components/(Footer)/Footer";
 import Navbar from "./components/(Navbar)/Navbar";
 import LoadingScreen from "./components/(LoadingScreen.js)/LoadingScreen";
+import { ProjectProvider } from "@/context/ProjectContext";
+import { getProjects } from "@/lib/getProjects";
 
 export const metadata: Metadata = {
   title: {
@@ -22,13 +25,17 @@ export default async function RootLayout({
   children: React.ReactNode;
 }>) {
 
+  const projects = await getProjects();
+
   return (
     <html lang="en">
       <body>
         {/* <LoadingScreen> */}
-          <Navbar/>
+         <ProjectProvider value={projects}>
+          <Navbar />
             {children}
           <Footer/>
+         </ProjectProvider>
         {/* </LoadingScreen> */}
       </body>
     </html>

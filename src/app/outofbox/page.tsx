@@ -1,7 +1,7 @@
 import React from 'react';
 import "./page.css";
 import { TfiThought } from "react-icons/tfi";
-import MainLayout from '../components/(MainLayout)/MainLayout';
+import MainLayout from '@/app/components/(MainLayout)/MainLayout';
 
 function Page() {
   return (
